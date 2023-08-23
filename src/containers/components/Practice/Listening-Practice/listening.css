@@ -1,0 +1,108 @@
+.article-page {
+    display: flex;
+    justify-content: flex-start;
+    min-height: 100vh; 
+    padding: 0 20px;
+  }
+  
+  .container_a {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    flex-grow: 1;
+    margin: 10px;
+    border-radius: 8px;
+  }
+  
+  .related-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    max-height: 100vh;
+    width: 100px;
+    min-width: 300px
+  }
+  
+  .article-page h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .article-page p {
+    margin-bottom: 10px;
+    color: #888;
+  }
+  
+  .article-page img {
+    max-width: 100%;
+    margin-bottom: 20px;
+    height: auto;
+    width: auto;
+    max-height: 50vh;
+  }
+  
+  .article-content {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .title_practice_page {
+    width: 100%;
+    background: #e31837;
+    background: linear-gradient(122deg, #e31837 28%, #e33e18 90%);
+    padding: 48px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+
+  .title_practice_page:hover {
+    color: #fff;
+  }
+
+  .audio-player-container {
+    /* Add more specific styles for the audio player container */
+    position: relative;
+  }
+  
+  .audio-player-container.sticky {
+    /* Change the background color to red when sticky */
+    
+    background:none;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 0%;
+
+  }
+
+
+  /* Media Query for Mobile View */
+  @media only screen and (max-width: 767px) {
+    .article-page {
+      flex-direction: column;
+      margin: 0px;
+    }
+  
+    .container_a {
+      margin-bottom: 0px;
+    }
+  
+    .related-container {
+      width: calc(100% - 40px); /* Adjusted width to match the main container with margin */
+      margin-left: auto; /* Move the related container to the right */
+      margin-right: auto;
+    }
+    .essay_question_box{
+    padding: 30px;
+    border-radius: 8px;
+    }
+
+  }
+  

@@ -1,0 +1,9 @@
+.audio-player {
+    opacity: 30; /* Add some bottom margin to separate from other components */
+  }
+
+  audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+      background-color: #fff;
+      color: #fff;
+     }

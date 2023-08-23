@@ -1,0 +1,179 @@
+.listening-container {
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: wrap; /* Prevent wrapping of content */
+    margin-top: 10px;
+    min-height: 600px;
+    text-align: left;
+    margin-bottom: 10px; /* Add this to make the ::before pseudo-element position relative to the container */
+    position: relative; /* Add relative positioning to the container */
+    max-width: 1000px; /* Add a maximum width to the container */
+    
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+  }
+  
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  .question-text {
+    margin-bottom: 5px;
+  }
+  
+  .blank-underline {
+    display: inline-block;
+    border-bottom: 1px dotted #000; /* Underline style for the blanks */
+    padding: 0 2px; /* Add some padding for better visual appearance */
+  }
+  
+  .blank-underline:focus {
+    outline: none; /* Remove the default focus outline */
+    border-color: transparent; /* Hide the border when focused */
+  }
+  
+  .answer-input {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    border-radius: 0; /* Remove border-radius to remove the rounded corners */
+    border-bottom: 1px solid #ccc; /* Add bottom border for the input field */
+  }
+  
+  .submit-button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007bff; /* Blue submit button background color */
+    color: #fff; /* White text color for the submit button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .question-text input {
+    /* Styles specifically for the input inside the question text */
+    border: none; /* Remove border */
+    border-bottom: 1px dashed #000; /* Add a dashed underline */
+    width: 50px;
+    outline: none;
+    background-color: transparent;
+    /* Add any other styling you need for the input */
+  }
+  
+  /* ... (existing CSS styles) ... */
+  
+  .page-navigation {
+    flex-direction: column; /* Arrange the arrows vertically */
+    position: absolute; /* Position the arrows relative to the .listening-container */
+    top: 50%; /* Position the arrows 50% from the top */
+    transform: translateY(-50%); /* Vertically center the arrows */ /* Adjust the position from the right edge of the container */
+    font-size: 24px; /* Adjust the font size as needed */
+    cursor: pointer;
+    left: 5px;
+    right: 5px;
+    
+  }
+  
+  .arrow_left {
+    float: left;
+    /* Position the left arrow on the left side */
+    /* Adjust the spacing between arrows */
+  }
+  
+  .arrow_right {
+    float: right;
+/* Position the right arrow on the right side */
+    /* Adjust the spacing between arrows */
+  }
+
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  .question-text {
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .mcq-options {
+    list-style-type:decimal;
+    padding: 0;
+  }
+  
+  .mcq-options label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .mcq-options input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+/* listeningquestions.css */
+
+/* Default styles for the table */
+.table-completion {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+.table-completion th,
+.table-completion td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.table-completion th {
+  background-color: #f2f2f2;
+}
+
+/* Styles for the input fields inside the table */
+.table-completion td input[type="text"],
+.table-completion td input[type="radio"],
+.table-completion td input[type="checkbox"] {
+  width: inherit;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  outline:#ccc;
+  outline-width: thin;
+  outline-style: dotted;/* Adjust the font size as needed */
+}
+
+/* Styles for small screens (mobile devices) */
+@media (max-width: 768px) {
+  .question-page {
+    white-space: normal; /* Allow wrapping of content on small screens */
+  }
+
+  .question {
+    margin-bottom: 10px;
+  }
+  
+  .question-text {
+    margin-bottom: 6px;
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+  
+  .mcq-options label {
+    font-size: 14px;
+    flex-wrap: wrap; /* Adjust the font size for MCQ options */
+  }
+
+  .table-completion th,
+  .table-completion td {
+    padding: 8px; /* Adjust the padding for table cells */
+    font-size: 12px; /* Reduce the font size for table cells on mobile devices */
+  }
+
+  
+}
+
+  

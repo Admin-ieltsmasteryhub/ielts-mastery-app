@@ -1,0 +1,15 @@
+.footer-copyright {
+    text-align: center;
+    padding: 10px 0;
+    background: #252e34;
+    color: #fff;
+    font-size: 14px;
+    /*opacity: 0;
+     transition: opacity 0.3s ease;
+    opacity: 1; */
+  }
+  
+  /* .footer-copyright:hover {
+    opacity: 1;
+  } */
+  
