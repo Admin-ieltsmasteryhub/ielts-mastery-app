@@ -50,7 +50,7 @@ const navLinksMobile = [
         },
         {
           display: "Practice exercises",
-          url: "#",
+          url: "listeningpractice/listeningexercise",
         },
         {
           display: "Sample questions and answers",
@@ -72,7 +72,7 @@ const navLinksMobile = [
         },
         {
           display: "Practice passages and questions",
-          url: "#",
+          url: "/readingpractice/readingexercise",
         },
         {
           display: "Vocabulary building",
@@ -86,7 +86,7 @@ const navLinksMobile = [
     },
     {
       display: "Writing",
-      url: "/blogs",
+      url: "#",
       subLinks: [
         {
           display: "Writing task structures",
@@ -102,7 +102,7 @@ const navLinksMobile = [
         },
         {
             display: "Writing practice prompts",
-            url: "#",
+            url: "/essaypractice/essayevaluator",
         },
       ],
     },
@@ -138,15 +138,15 @@ const navLinksMobile = [
           },
           {
             display: "Synonyms and antonyms",
-            url: "#",
+            url: "/vocabulary/synonymsantonyms",
           },
           {
             display: "Idioms and expressions",
-            url: "#",
+            url: "/vocabulary/idioms",
           },
           {
               display: "Vocabulary-building exercises",
-              url: "#",
+              url: "/vocabulary/vocabularybuilding",
           },
         ],
       },
@@ -251,35 +251,35 @@ const navLinksMobile = [
             subLinks: [
                 {
                   display: "What is IELTS?",
-                  url: "about/What is IELTS?",
+                  url: "What-is-IELTS?",
                 },
                 {
                   display: "The different types of IELTS tests",
-                  url: "about/The different types of IELTS tests",
+                  url: "The-different-types-of-IELTS-tests",
                 },
                 {
-                  display: "The IELTS test format",
-                  url: "about/The IELTS test format",
+                  display: "The IELTS Test Format",
+                  url: "The-IELTS-Test-Format",
                 },
                 {
                   display: "The IELTS scoring system",
-                  url: "about/The IELTS scoring system",
+                  url: "The-IELTS-scoring-system",
                 },
                 {
                   display: "Preparing for IELTS",
-                  url: "about/Preparing for IELTS",
+                  url: "Preparing-for-IELTS",
                 },
                 {
                   display: "Taking the IELTS test",
-                  url: "about/Taking the IELTS test",
+                  url: "Taking-the-IELTS-test",
                 },
                 {
                   display: "Getting your IELTS results",
-                  url: "about/Getting your IELTS results",
+                  url: "Getting-your-IELTS-results",
                 },
                 {
                   display: "Using your IELTS results",
-                  url: "about/Using your IELTS results",
+                  url: "Using-your-IELTS-results",
                 },
               ],
         },
@@ -303,7 +303,7 @@ const navLinksMobile = [
             },
             {
               display: "Practice exercises",
-              url: "#",
+              url: "listeningexercise",
             },
             {
               display: "Sample questions and answers",
@@ -325,7 +325,7 @@ const navLinksMobile = [
             },
             {
               display: "Practice passages and questions",
-              url: "#",
+              url: "readingexercise",
             },
             {
               display: "Vocabulary building",
@@ -355,7 +355,7 @@ const navLinksMobile = [
             },
             {
                 display: "Writing practice prompts",
-                url: "#",
+                url: "essayevaluator",
             },
           ],
         },
@@ -385,7 +385,7 @@ const navLinksMobile = [
     },
       {
         display: "Vocabulary",
-        url: "/blogs",
+        url: "#",
         subLinks: [
           {
             display: "Word lists and thematic vocabulary",
@@ -393,15 +393,15 @@ const navLinksMobile = [
           },
           {
             display: "Synonyms and antonyms",
-            url: "#",
+            url: "/vocabulary/synonymsantonyms",
           },
           {
             display: "Idioms and expressions",
-            url: "#",
+            url: "/vocabulary/idioms",
           },
           {
               display: "Vocabulary-building exercises",
-              url: "#",
+              url: "/vocabulary/vocabularybuilding",
           },
         ],
       },
@@ -429,7 +429,7 @@ const navLinksMobile = [
       },
       {
         display: "Practice Tests",
-        url: "/blogs",
+        url: "#",
         subLinks: [
           {
             display: "Full-length mock tests",

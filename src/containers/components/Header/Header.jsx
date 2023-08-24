@@ -39,7 +39,7 @@ const Header = () => {
               <ul className="nav__list">
                 {Links.navLinks.map((item, index) => (
                   <li key={index} className="nav__item">
-                    <a href={item.url}>{item.display}</a>
+                    <NavLink to={`${item.url}`}>{item.display}</NavLink>
                     {item.subLinks && (
                       <ul className="sub__list">
                         {item.subLinks.map((subItem, subIndex) => (
@@ -47,12 +47,12 @@ const Header = () => {
                             key={subIndex}
                             className={`sub__item ${activeSubItem === subItem ? 'active' : ''}`}
                           >
-                            <a href={subItem.url} onClick={() => toggleSubItem(subItem)}>
+                            <NavLink to={`${subItem.url}`} onClick={() => toggleSubItem(subItem)}>
                               {subItem.display}
                               {subItem.subLinks && (
                                 <img src={nextIcon} alt="Next" className="next__icon" />
                               )}
-                            </a>
+                            </NavLink>
                             {subItem.subLinks && activeSubItem === subItem && (
                               <ul className="sub__sub__list">
                                 {subItem.subLinks.map((subSubItem, subSubIndex) => (
@@ -62,12 +62,12 @@ const Header = () => {
                                       activeSubSubItem === subSubItem ? 'active' : ''
                                     }`}
                                   >
-                                    <a
-                                      href={subSubItem.url}
+                                    <NavLink
+                                      to={`/${subItem.display.replace(/\s+/g, "-")}/${subSubItem.url}`}
                                       onClick={() => toggleSubSubItem(subSubItem)}
                                     >
                                       {subSubItem.display}
-                                    </a>
+                                    </NavLink>
                                   </li>
                                 ))}
                               </ul>
@@ -98,8 +98,8 @@ const Header = () => {
                     key={index}
                     className={`mobile__nav__item ${activeItem === item ? "active" : ""}`}
                   >
-                    <a
-                      href={item.url}
+                    <NavLink
+                      to={item.url}
                       onClick={() =>
                         setActiveItem((prevItem) => (prevItem === item ? null : item))
                       }
@@ -108,12 +108,12 @@ const Header = () => {
                       {item.subLinks && (
                         <img src={nextIcon} alt="Next" className="next__icon" />
                       )}
-                    </a>
+                    </NavLink>
                     {item.subLinks && activeItem === item && (
                       <ul className="mobile__sub__list">
                         {item.subLinks.map((subItem, subIndex) => (
                           <li key={subIndex} className="mobile__sub__item">
-                            <a href={subItem.url}>{subItem.display}</a>
+                            <NavLink to={subItem.url}>{subItem.display}</NavLink>
                           </li>
                         ))}
                       </ul>

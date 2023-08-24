@@ -3,8 +3,8 @@ import AboutExam from '../components/About-Page/Aboutus';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import FooterCopyright from '../components/Footer-Copyright/FooterCopyright';
-import images from '../assets/images/about-us.png';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 const Article = () => {
   const { title } = useParams();
@@ -19,22 +19,19 @@ const Article = () => {
   });
 
   useEffect(() => {
-    // Data for the POST request
-    // Make a POST request to fetch the articleData based on the title
+    // Make a GET request to fetch the articleData based on the title
     // Replace this with your actual API endpoint and headers
     console.log(title);
-    fetch('https://localhost:7284/api/Blog/What%20is%20IELTS%3F', {
-      method: 'GET',
+    axios.get(`https://localhost:7284/api/Blog/${encodeURIComponent(title)}`, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       },
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
+    .then(response => {
+      console.log(response.data);
       // Update the state with the fetched data
-      setArticleData(data);
+      setArticleData(response.data);
     })
     .catch(error => {
       console.error('Error fetching article data:', error);
@@ -45,7 +42,7 @@ const Article = () => {
     <div>
       <Header />
       <AboutExam
-        title={articleData.title}
+        title={articleData.title.replaceAll('-',' ')}
         updateDate={articleData.updateDate}
         author={articleData.author}
         image={articleData.image}

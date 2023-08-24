@@ -21,14 +21,14 @@ const AppRoutes = () => {
           <Route exact path="/" element={<Home/>} />
           <Route path="/blogs" element={<Blog/>} />
           <Route path="/blog/:id" element={<BlogPostPage/>} />
-          <Route path="/about/:title" element={<Article />} />
-          <Route path="/EssayPractice" element={<EssayPractice />} />
-          <Route path="/ListeningPractice" element={<ListeningPractice/>} />
-          <Route path="/ReadingPractice" element={<ReadingPractice/>} />
-          <Route path="/Dictionary" element={<Dictionary/>} />
-          <Route path="/SynonymsAntonyms" element={<SynonymsAntonymsPage/>} />
-          <Route path="/Idioms" element={<IdiomsPage/>} />
-          <Route path="/VocabularyPractice" element={<VocabularyPractice/>} />
+          <Route path="/about-IELTS/:title" element={<Article />} /> 
+          <Route path="/Writing/essayevaluator" element={<EssayPractice />} />
+          <Route path="/Listening/listeningexercise" element={<ListeningPractice/>} />
+          <Route path="/Reading/readingexercise" element={<ReadingPractice/>} />
+          <Route path="/dictionary" element={<Dictionary/>} />
+          <Route path="/vocabulary/synonymsantonyms" element={<SynonymsAntonymsPage/>} />
+          <Route path="/vocabulary/idioms" element={<IdiomsPage/>} />
+          <Route path="/vocabulary/vocabularybuilding" element={<VocabularyPractice/>} />
         </Routes>
       </Router>
     );

@@ -11,9 +11,7 @@ const AboutExam = ({ title, updateDate, author, image, article }) => {
           </div>
           <p>Updated on {updateDate} by {author}</p>
 {image && <img src={image} alt="Article" />}
-<div className="article-content">
-  <React.Fragment>{article}</React.Fragment>
-  
+<div className="article-content"  dangerouslySetInnerHTML={{ __html: article }}>
 </div>
         </div>
         <div className="related-container">
