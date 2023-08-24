@@ -299,7 +299,7 @@ const navLinksMobile = [
           subLinks: [
             {
               display: "Listening strategies and tips",
-              url: "#",
+              url: "Listening-strategies-and-tips",
             },
             {
               display: "Practice exercises",
@@ -321,7 +321,7 @@ const navLinksMobile = [
           subLinks: [
             {
               display: "Reading techniques and approaches",
-              url: "#",
+              url: "Reading-techniques-and-approaches",
             },
             {
               display: "Practice passages and questions",
@@ -343,11 +343,11 @@ const navLinksMobile = [
           subLinks: [
             {
               display: "Writing task structures",
-              url: "#",
+              url: "Writing-task-structures",
             },
             {
               display: "Essay writing tips",
-              url: "#",
+              url: "Essay-writing-tips",
             },
             {
               display: "Sample essays and model answers",
@@ -365,11 +365,11 @@ const navLinksMobile = [
             subLinks: [
                 {
                   display: "Speaking test format",
-                  url: "#",
+                  url: "Speaking-test-format",
                 },
                 {
                   display: "Speaking strategies and preparation tips",
-                  url: "#",
+                  url: "Speaking-strategies-and-preparation-tips",
                 },
                 {
                   display: "Sample speaking questions and answers",
@@ -393,29 +393,29 @@ const navLinksMobile = [
           },
           {
             display: "Synonyms and antonyms",
-            url: "/vocabulary/synonymsantonyms",
+            url: "/Vocabulary/synonymsantonyms",
           },
           {
             display: "Idioms and expressions",
-            url: "/vocabulary/idioms",
+            url: "/Vocabulary/idioms",
           },
           {
               display: "Vocabulary-building exercises",
-              url: "/vocabulary/vocabularybuilding",
+              url: "/Vocabulary/vocabularybuilding",
           },
         ],
       },
       {
         display: "Grammar",
-        url: "/blogs",
+        url: "#",
         subLinks: [
           {
             display: "Essential grammar rules",
-            url: "#",
+            url: "/Grammer/Essential-grammar-rules",
           },
           {
             display: "Common grammar mistakes",
-            url: "#",
+            url: "/Grammer/Common-grammar-mistakes",
           },
           {
             display: "Practice exercises",
@@ -484,7 +484,7 @@ const navLinksMobile = [
             url: "#",
           },
           {
-            display: "Inquiry form",
+            display: "Enquiry form",
             url: "#",
           },
           {

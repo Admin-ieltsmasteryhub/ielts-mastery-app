@@ -23,12 +23,18 @@ const AppRoutes = () => {
           <Route path="/blog/:id" element={<BlogPostPage/>} />
           <Route path="/about-IELTS/:title" element={<Article />} /> 
           <Route path="/Writing/essayevaluator" element={<EssayPractice />} />
+          <Route path="/Writing/:title" element={<EssayPractice />} />
           <Route path="/Listening/listeningexercise" element={<ListeningPractice/>} />
+          <Route path="/Listening/:title" element={<Article/>} />
           <Route path="/Reading/readingexercise" element={<ReadingPractice/>} />
+          <Route path="/Reading/:title" element={<Article/>} />
+          <Route path="/Speaking/:title" element={<Article/>} />
+          <Route path="/Grammer/Essential-grammar-rules" element={<Article/>} />
+          <Route path="/Grammer/Common-grammar-mistakes" element={<Article/>} />
           <Route path="/dictionary" element={<Dictionary/>} />
-          <Route path="/vocabulary/synonymsantonyms" element={<SynonymsAntonymsPage/>} />
-          <Route path="/vocabulary/idioms" element={<IdiomsPage/>} />
-          <Route path="/vocabulary/vocabularybuilding" element={<VocabularyPractice/>} />
+          <Route path="/Vocabulary/synonymsantonyms" element={<SynonymsAntonymsPage/>} />
+          <Route path="/Vocabulary/idioms" element={<IdiomsPage/>} />
+          <Route path="/Vocabulary/vocabularybuilding" element={<VocabularyPractice/>} />
         </Routes>
       </Router>
     );
