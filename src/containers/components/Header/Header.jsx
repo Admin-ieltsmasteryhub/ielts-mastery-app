@@ -39,7 +39,7 @@ const Header = () => {
               <ul className="nav__list">
                 {Links.navLinks.map((item, index) => (
                   <li key={index} className="nav__item">
-                    <NavLink to={`${item.url}`}>{item.display}</NavLink>
+                    <NavLink className="hover-underline-animation" to={`${item.url}`}>{item.display}</NavLink>
                     {item.subLinks && (
                       <ul className="sub__list">
                         {item.subLinks.map((subItem, subIndex) => (
