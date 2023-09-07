@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer';
 import FooterCopyright from '../components/Footer-Copyright/FooterCopyright';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Article = () => {
   const { title } = useParams();
@@ -21,8 +22,7 @@ const Article = () => {
   useEffect(() => {
     // Make a GET request to fetch the articleData based on the title
     // Replace this with your actual API endpoint and headers
-    console.log(title);
-    axios.get(`https://localhost:7284/api/Blog/${encodeURIComponent(title)}`, {
+    axios.get(`https://localhost:7284/api/Blog/${title}`, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -34,7 +34,9 @@ const Article = () => {
       setArticleData(response.data);
     })
     .catch(error => {
+      toast.error("Something went wrong!")
       console.error('Error fetching article data:', error);
+      
     });
   }, [title]);
 

@@ -251,7 +251,7 @@ const navLinksMobile = [
             subLinks: [
                 {
                   display: "What is IELTS?",
-                  url: "What-is-IELTS?",
+                  url: "what-is-IELTS?",
                 },
                 {
                   display: "The different types of IELTS tests",
@@ -262,24 +262,24 @@ const navLinksMobile = [
                   url: "The-IELTS-Test-Format",
                 },
                 {
-                  display: "The IELTS scoring system",
-                  url: "The-IELTS-scoring-system",
+                  display: "The IELTS Scoring System",
+                  url: "The-IELTS-Scoring-System",
                 },
                 {
                   display: "Preparing for IELTS",
                   url: "Preparing-for-IELTS",
                 },
                 {
-                  display: "Taking the IELTS test",
-                  url: "Taking-the-IELTS-test",
+                  display: "Taking the IELTS Test",
+                  url: "Taking-the-IELTS-Test",
                 },
                 {
-                  display: "Getting your IELTS results",
-                  url: "Getting-your-IELTS-results",
+                  display: "Getting your IELTS Results",
+                  url: "Getting-your-IELTS-Results",
                 },
                 {
                   display: "Using your IELTS results",
-                  url: "Using-your-IELTS-results",
+                  url: "Using-your-IELTS-Results",
                 },
               ],
         },

@@ -161,17 +161,17 @@ const ListeningQuestions = () => {
         text: 'True or False: The Earth is flat.',
         type: 'tfng',
       },
-      {
-        number: 15,
-        text: 'Complete the table based on the information in the passage:',
-        type: 'table_completion',
-        headings: ['Species 1', 'Size 2', 'Climate 3','Temp 4'],
-        tableData: [
-          ['abcd', 'asdfg', '__' ,'asdfg'],
-          ['abcd', 'abcd', 'abcd','abcd'],
-          ['abcd', '__', 'abcd','abcd'],
-        ],
-      },
+      // {
+      //   number: 15,
+      //   text: 'Complete the table based on the information in the passage:',
+      //   type: 'table_completion',
+      //   headings: ['Species 1', 'Size 2', 'Climate 3','Temp 4'],
+      //   tableData: [
+      //     ['abcd', 'asdfg', '__' ,'asdfg'],
+      //     ['abcd', 'abcd', 'abcd','abcd'],
+      //     ['abcd', '__', 'abcd','abcd'],
+      //   ],
+      // },
       // Add more questions for Page 2
     // Add more pages with different sets of questions
   ];

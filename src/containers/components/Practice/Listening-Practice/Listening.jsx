@@ -6,7 +6,7 @@ import ielts11 from '../../../assets/audios/ielts11.mp3';
 
 const Listening = () => {
   const [isSticky, setIsSticky] = useState(false);
-
+  const isMobileView = window.innerWidth <= 768;
   useEffect(() => {
     const handleScroll = () => {
       const audioPlayerContainer = document.getElementById('audioPlayerContainer');
@@ -24,7 +24,7 @@ const Listening = () => {
   return (
     <div className='container'>
       <div className="article-page">
-        <div className="container_a">
+        <div className={isMobileView ? null :"container_a"}>
           <div className='title_practice_page '>
             <h1>Listening Practice</h1>
             <h5>Get your listening skills evaluated</h5>
@@ -33,7 +33,7 @@ const Listening = () => {
             className={`audio-player-container ${isSticky ? 'sticky' : ''}`}
             id="audioPlayerContainer"
           >
-            <AudioPlayer />
+            <AudioPlayer youtubeVideoID='uI_JZ-9_1bw'/>
           </div>
           <ListeningQuestions />
         </div>
