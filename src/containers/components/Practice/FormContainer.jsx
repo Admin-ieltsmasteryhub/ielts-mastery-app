@@ -5,7 +5,9 @@ import MCQQuestion from './QuestionTypes/MCQQuestion';
 import MCQMultiQuestions from './QuestionTypes/MCQMultiQuestion';
 import TFNGQuestion from './QuestionTypes/TFNGQuestion';
 import TableCompletionQuestion from './QuestionTypes/TableCompletionQuestion';
+import DiagramQuestion from './QuestionTypes/DiagramQuestion'; // Import DiagramQuestion component
 import Button from '../Button/Button';
+import TextboxInputQuestion from './QuestionTypes/TextboxInputQuestion';
 
 const FormContainer = ({ questions, onSubmit }) => {
   const [answers, setAnswers] = useState({});
@@ -74,6 +76,24 @@ const FormContainer = ({ questions, onSubmit }) => {
                 onChange={(row, column, value) =>
                   handleTableCompletionChange(question.number, row, column, value)
                 }
+              />
+            );
+          } else if (question.type === 'diagram') {
+            return (
+              <DiagramQuestion
+                key={question.number}
+                question={question}
+                onChange={(answer) => handleInputChange(question.number, answer)}
+                value={answers[question.number] || ''}
+              />
+            );
+          } else if (question.type === 'textbox_input') {
+            return (
+              <TextboxInputQuestion
+                key={question.number}
+                question={question}
+                onChange={(answer) => handleInputChange(question.number, answer)}
+                value={answers[question.number] || ''}
               />
             );
           } else {
