@@ -5,9 +5,11 @@ import MCQQuestion from './QuestionTypes/MCQQuestion';
 import MCQMultiQuestions from './QuestionTypes/MCQMultiQuestion';
 import TFNGQuestion from './QuestionTypes/TFNGQuestion';
 import TableCompletionQuestion from './QuestionTypes/TableCompletionQuestion';
-import DiagramQuestion from './QuestionTypes/DiagramQuestion'; // Import DiagramQuestion component
+import DiagramQuestion from './QuestionTypes/DiagramQuestion';
 import Button from '../Button/Button';
 import TextboxInputQuestion from './QuestionTypes/TextboxInputQuestion';
+import MatchQuestion from './QuestionTypes/MatchQuestion'; // Import MatchQuestion component
+import DropDownInputQuestion from './QuestionTypes/DropDownInputQuestion';
 
 const FormContainer = ({ questions, onSubmit }) => {
   const [answers, setAnswers] = useState({});
@@ -94,6 +96,23 @@ const FormContainer = ({ questions, onSubmit }) => {
                 question={question}
                 onChange={(answer) => handleInputChange(question.number, answer)}
                 value={answers[question.number] || ''}
+              />
+            );
+          }else if (question.type === 'dropdown_input') {
+            return (
+              <DropDownInputQuestion
+              key={question.number}
+              question={question}
+              onChange={(answer) => handleInputChange(question.number, answer)}
+              value={answers[question.number] || ''}
+            />
+
+            );
+          } else if (question.type === 'match') {
+            return (
+              <MatchQuestion
+                key={question.number}
+                question={question}
               />
             );
           } else {

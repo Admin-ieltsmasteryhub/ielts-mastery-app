@@ -58,17 +58,38 @@ const ListeningQuestions = () => {
         number: 17,
         type: 'textbox_input',
       },
-      // {
-      //   number: 15,
-      //   text: 'Complete the table based on the information in the passage:',
-      //   type: 'table_completion',
-      //   headings: ['Species 1', 'Size 2', 'Climate 3','Temp 4'],
-      //   tableData: [
-      //     ['abcd', 'asdfg', '__' ,'asdfg'],
-      //     ['abcd', 'abcd', 'abcd','abcd'],
-      //     ['abcd', '__', 'abcd','abcd'],
-      //   ],
-      // },
+      {
+        text: 'Match the correct statement with the letter',
+        type: 'match',
+        questions: [
+          'Johannes Gutenberg was famous for',
+          'What Gutenberg thought to have in invention',
+          'Gutenberg thought to have also invented the-',
+          'What revolution did the printing press create',
+        ],
+        matches: ['A Oil-based ink', 
+      'B Information revolution', 
+      'C Inventing printing press', 
+      'D Metal alloy', 
+      'E Punch matrix system'],
+      },
+      {
+        number: 18,
+        type: 'dropdown_input',
+        text: 'Select the correct option:',
+        options: ['Option A', 'Option B', 'Option C', 'Option D', 'Option E'],
+      },
+      {
+        number: 19,
+        text: 'Complete the table based on the information in the passage:',
+        type: 'table_completion',
+        headings: ['Species 1', 'Size 2', 'Climate 3','Temp 4'],
+        tableData: [
+          ['abcd', 'asdfg', '__' ,'asdfg'],
+          ['abcd', 'abcd', 'abcd','abcd'],
+          ['abcd', '__', 'abcd','abcd'],
+        ],
+      },
       // Add more questions for Page 2
     // Add more pages with different sets of questions
   ];
