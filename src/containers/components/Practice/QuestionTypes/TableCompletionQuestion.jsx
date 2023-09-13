@@ -2,9 +2,9 @@ import React from 'react';
 import '../Listening-Practice/listeningquestions.css';
 
 const TableCompletionQuestion = ({ question, onChange,value }) => {
-  const handleInputChange = (event, row, column) => {
+  const handleInputChange = (event, questionNumber) => {
     const { value } = event.target;
-    onChange(row, column, value);
+    onChange(questionNumber, value);
   };
 
   return (
@@ -23,12 +23,12 @@ const TableCompletionQuestion = ({ question, onChange,value }) => {
             <tr key={rowIndex}>
               {rowData.map((cellData, columnIndex) => (
                 <td key={columnIndex}>
-                  {cellData === '__' ? (
+                  {cellData.includes('__') ? (
                     <input
                       type="text"
                       value={value}
                       onChange={(event) =>
-                        handleInputChange(event, rowIndex, columnIndex)
+                        handleInputChange(event, cellData.substring (0,2))
                       }
                     />
                   ) : (
