@@ -14,7 +14,7 @@ const TextboxInputQuestion = ({ question, onChange, value }) => {
       </p>
       <div className="diagram-question">
         <div>
-          <input
+          <input className='dropdown-question'
             type="text"
             onChange={handleInputChange}
             value={value}
