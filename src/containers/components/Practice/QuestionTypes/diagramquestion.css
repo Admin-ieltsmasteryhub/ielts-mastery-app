@@ -1,23 +1,34 @@
 /* Add your CSS classes here */
-
-
-  
-  .question-text {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .question-number {
-    margin-right: 5px;
-  }
-  
-  .diagram-question select {
+.dropdown-question{
+  background-image: none;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 38px;
+    outline: none;
+    padding-left: 0;
+    padding-right: 6px;
+    position: relative;
+    text-align: left !important;
+    transition: all .2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
     width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 16px;
-  }
-  
+    margin-bottom: 10px;
+}
+
+.dropdown_question-text{
+  margin-bottom: 10px;
+}
   /* Add more styles as needed */
   
