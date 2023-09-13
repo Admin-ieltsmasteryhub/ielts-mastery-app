@@ -21,18 +21,18 @@ const FormContainer = ({ questions, onSubmit }) => {
     }));
   };
 
-  const handleTableCompletionChange = (questionNumber, row, column, value) => {
-    setAnswers((prevAnswers) => ({
-      ...prevAnswers,
-      [questionNumber]: {
-        ...prevAnswers[questionNumber],
-        [row]: {
-          ...prevAnswers[questionNumber]?.[row],
-          [column]: value,
-        },
-      },
-    }));
-  };
+  // const handleTableCompletionChange = (questionNumber, row, column, value) => {
+  //   setAnswers((prevAnswers) => ({
+  //     ...prevAnswers,
+  //     [questionNumber]: {
+  //       ...prevAnswers[questionNumber],
+  //       [row]: {
+  //         ...prevAnswers[questionNumber]?.[row],
+  //         [column]: value,
+  //       },
+  //     },
+  //   }));
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -75,8 +75,8 @@ const FormContainer = ({ questions, onSubmit }) => {
               <TableCompletionQuestion
                 key={question.number}
                 question={question}
-                onChange={(row, column, value) =>
-                  handleTableCompletionChange(question.number, row, column, value)
+                onChange={(questionNumber, value) =>
+                  handleInputChange(questionNumber, value)
                 }
               />
             );
