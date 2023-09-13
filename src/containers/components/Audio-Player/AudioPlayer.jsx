@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import ReactPlayer from 'react-player';
+import H5AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 import './audioplayer.css'; // Import the CSS file for styling
+import { TbRewindForward5,TbRewindBackward5,TbPlayerPlay,TbPlayerPause,TbVolumeOff,TbVolume } from "react-icons/tb";
 
 const AudioPlayer = ({ youtubeVideoID }) => {
   const [link, setLink] = useState('');
@@ -63,8 +65,10 @@ const AudioPlayer = ({ youtubeVideoID }) => {
       });
   }, []); // Use an empty dependency array
 
-  return (
-    <audio src={link} controls controlsList="nodownload" style={{ width: '100%' }} className="audio-player"></audio>
+  return (<>
+    <H5AudioPlayer src={link} style={{ width: '100%' }} className="audio-player"  customAdditionalControls={[]} autoPlay="false" customIcons={{
+      rewind: <TbRewindBackward5/>,forward: <TbRewindForward5/>,play:<TbPlayerPlay/>,pause:<TbPlayerPause/>,volume:<TbVolume/>,volumeMute:<TbVolumeOff/>}}></H5AudioPlayer>
+      </>
   );
 };
 
