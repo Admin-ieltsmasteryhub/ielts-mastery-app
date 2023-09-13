@@ -12,10 +12,9 @@ const DropDownInputQuestion = ({ question, onChange, value }) => {
         <span className="question-number">{question.number}</span>
         <span>{question.text}</span>
       </p>
-      <div className="diagram-question">
       <div>
           {question.options && question.options.length > 0 ? (
-            <select onChange={handleInputChange} value={value}>
+            <select className='dropdown-question' onChange={handleInputChange} value={value}>
               {question.options.map((option, index) => (
                 <option key={index} value={option}>
                   {option}
@@ -32,7 +31,6 @@ const DropDownInputQuestion = ({ question, onChange, value }) => {
             </select>
           )}
         </div>
-      </div>
     </div>
   );
 };
