@@ -1,5 +1,5 @@
 
-.article-page {
+/* .article-page {
     display: flex;
     justify-content: flex-start;
     min-height: 100vh;
@@ -34,7 +34,7 @@
     max-height: 100vh;
     width: 100px;
     min-width: 300px
-  }
+  } */
 
   .dic_title {
     width: 100%;
@@ -87,11 +87,7 @@
     border: 1px solid #ccc;
     border-radius: 4px 0 0 4px;
   }
-  
-  .search-bar button {
-    background-color: #eae3e3;
-    
-  }
+
   
   /*.search-bar button:hover {
     background-color: #0056b3;
