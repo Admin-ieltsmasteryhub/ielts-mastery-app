@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './vocabulary.css';
 import QuizQuestion from '../QuestionTypes/QuizQuestion'; // Import the extracted component
 import DictionaryDetails from '../../DictionaryDetails/DictionaryDetails';
+import vocabularycommonstyles from '../../Vocabulary/vocabularyCommon.module.css'
 
 const Vocabulary = () => {
   const quizData = [
@@ -37,8 +38,8 @@ const Vocabulary = () => {
 
   return (
     <div className="container">
-      <div className="sa-page">
-        <div className="container_dic">
+      <div className={vocabularycommonstyles.vocabulary_page}>
+        <div className={vocabularycommonstyles.vocabulary_page_container}>
           <h1>Vocabulary Trainer</h1>
           {currentIndex >= 0 && currentIndex < quizData.length ? (
             <QuizQuestion

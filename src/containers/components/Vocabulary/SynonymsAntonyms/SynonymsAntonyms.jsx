@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './synonymsantonyms.css';
+import vocabularycommonstyles from '../vocabularyCommon.module.css'
 
 const SynonymsAntonymsPage = () => {
   const [results, setResults] = useState(dummyResults); // Replace with your API data
@@ -16,8 +17,8 @@ const SynonymsAntonymsPage = () => {
 
   return (
     <div className='container'>
-    <div className="sa-page">
-    <div className="container_dic">
+    <div className={vocabularycommonstyles.vocabulary_page}>
+    <div className={vocabularycommonstyles.vocabulary_page_container}>
     <div className="synonyms-antonyms-page">
       <h1>Synonyms and Antonyms</h1>
       <table className="results-table">

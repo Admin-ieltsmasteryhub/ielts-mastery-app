@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './idioms.css';
+import vocabularycommonstyles from '../vocabularyCommon.module.css'
 
 const Idioms = () => {
   const [results, setResults] = useState(dummyResults); // Replace with your API data
@@ -16,8 +17,7 @@ const Idioms = () => {
 
   return (
     <div className='container'>
-      <div className="idioms-page">
-        <div className="container_dic">
+        <div className={vocabularycommonstyles.vocabulary_page_container}>
           <div className="idioms-expressions-page">
             <h1>Idioms and Expressions</h1>
             <table className="results-table">
@@ -51,7 +51,6 @@ const Idioms = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };

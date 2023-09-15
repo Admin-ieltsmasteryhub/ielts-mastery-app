@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './listening.css';
 import AudioPlayer from '../../Audio-Player/AudioPlayer';
 import ListeningQuestions from './ListeningQuestions';
-import ielts11 from '../../../assets/audios/ielts11.mp3';
+import practicecommonstyles from '../practiceCommon.module.css'
 
 const Listening = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -23,9 +23,10 @@ const Listening = () => {
 
   return (
     <div className='container'>
-      <div className="article-page">
-        <div className={isMobileView ? null :"container_a"}>
-          <div className='title_practice_page '>
+      <div className={practicecommonstyles.practice_page_container}>
+      <div className={practicecommonstyles.practice_page_child1}>
+        <div>
+          <div className={practicecommonstyles.practice_page_title}>
             <h1>Listening Practice</h1>
             <h5>Get your listening skills evaluated</h5>
           </div>
@@ -37,7 +38,8 @@ const Listening = () => {
           </div>
           <ListeningQuestions />
         </div>
-        <div className="related-container">
+      </div>
+      <div className={practicecommonstyles.practice_page_child2}>
           <h2>Four Pillars of IELTS writing</h2>
           <ul>
             <li>Task Response</li>

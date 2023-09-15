@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../../Button/Button';
 import "./essay.css";
+import practicecommonstyles from '../practiceCommon.module.css'
 
 const Essay = ({ title, updateDate, author, image, article }) => {
   const [essayQuestion, setEssayQuestion] = useState("");
@@ -8,21 +9,23 @@ const Essay = ({ title, updateDate, author, image, article }) => {
 
   return (
     <div className='container'>
-      <div className="article-page">
-        <div className="container_a">
-          <div className='book_test'>
+      <div className={practicecommonstyles.practice_page_container}>
+        <div className={practicecommonstyles.practice_page_child1}>
+          <div className={practicecommonstyles.practice_page_title}>
             <h1>Essay Checker</h1>
             <h5>Get your essay evaluated and know band score before real exam</h5>
           </div>
-          <div>
+          <div className={practicecommonstyles.practice_page_child1}>
             <textarea
-              className="essay-question-textarea" // Added CSS class name for the textarea
+              className="essay-question-textarea"  // Added CSS class name for the textarea
               placeholder="The Question of Essay"
               value={essayQuestion}
               onChange={(e) => setEssayQuestion(e.target.value)}
             />
+            </div>
+            <div>
             <textarea
-              className="essay-answer-textarea"// Added CSS class name for the textarea
+              className="essay-answer-textarea" // Added CSS class name for the textarea
               placeholder="Your essay"
               value={essayAnswer}
               onChange={(e) => setEssayAnswer(e.target.value)}
@@ -30,7 +33,7 @@ const Essay = ({ title, updateDate, author, image, article }) => {
             </div>
             <Button buttonText={"Check Essay!!"}/>
         </div>
-        <div className="related-container">
+        <div className={practicecommonstyles.practice_page_child2}>
           <h2>Four Pillars of IELTS writing </h2>
           <ul>
             <li>Task Response</li>

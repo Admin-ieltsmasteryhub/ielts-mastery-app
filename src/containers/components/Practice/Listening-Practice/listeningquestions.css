@@ -8,8 +8,8 @@
     margin-top: 10px;
     min-height: 600px;
     text-align: left;
-    margin-bottom: 10px; /* Add this to make the ::before pseudo-element position relative to the container */
-    position: relative; /* Add relative positioning to the container */
+    /*margin-bottom: 10px; /* Add this to make the ::before pseudo-element position relative to the container */
+    /*position: relative; /* Add relative positioning to the container */
     max-width: 1000px; /* Add a maximum width to the container */
     
   }
@@ -166,8 +166,7 @@
   }
   
   .mcq-options label {
-    font-size: 14px;
-    flex-wrap: wrap; /* Adjust the font size for MCQ options */
+    font-size: 14px; /* Adjust the font size for MCQ options */
   }
 
   .table-completion th,

@@ -113,7 +113,7 @@
     margin-top: 10px;
     min-height: 600px;
     text-align: left;
-    margin-bottom: 10px; /* Add this to make the ::before pseudo-element position relative to the container */
+    /*margin-bottom: 10px; /* Add this to make the ::before pseudo-element position relative to the container */
     position: relative; /* Add relative positioning to the container */ /* Add a maximum width to the container */
     
   }

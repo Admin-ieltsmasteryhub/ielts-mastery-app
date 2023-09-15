@@ -1,0 +1,93 @@
+.practice_page_container {
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+    gap: 1em;
+    margin: 10px 10px 10px 0;
+    
+  }
+
+  .practice_page_child1 {
+    
+  }
+  
+  /* .container_practice {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    flex-grow: 1;
+    margin: 10px;
+    border-radius: 8px;
+  } */
+  
+  .practice_page_child2 {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    min-width: 200px
+  }
+  
+  .practice_page h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .practice_page p {
+    margin-bottom: 10px;
+    color: #888;
+  }
+  
+  .practice_page img {
+    max-width: 100%;
+    margin-bottom: 20px;
+    height: auto;
+    width: auto;
+    max-height: 50vh;
+  }
+  
+  .practice_content {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .practice_page_title {
+    width: 100%;
+    background: #e31837;
+    background: linear-gradient(122deg, #e31837 28%, #e33e18 90%);
+    padding: 48px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+
+  .practice_page_title:hover {
+    color: #fff;
+  }
+
+  .practice_page_title h1{
+    -webkit-text-stroke: 2px #dde9e2;
+    color: #e31837;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+
+
+
+  /* Media Query for Mobile View */
+  @media only screen and (max-width: 767px) {
+    .practice_page_container {
+        grid-template-columns: 1fr; /* Single column for mobile view */
+      }
+
+    .practice_page {
+      margin: 0px;
+    }
+  
+    .container_practice {
+      margin-bottom: 0px;
+    }
+
+  }
+  

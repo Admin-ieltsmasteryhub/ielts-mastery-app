@@ -3,6 +3,7 @@ import { FaVolumeUp } from 'react-icons/fa';
 import "./dictionarypage.css";
 import { toast } from 'react-toastify';
 import Button from '../Button/Button';
+import vocabularycommonstyles from '../Vocabulary/vocabularyCommon.module.css'
 
 
 const DictionaryPage = () => {
@@ -55,8 +56,7 @@ const DictionaryPage = () => {
 
   return (
     <div className='container'>
-      <div className="article-page">
-        <div className="container_dic">
+        <div className={vocabularycommonstyles.vocabulary_page_container}>
           <h1>Dictionary</h1>
           <div className='dic_title'>
             <div className="search-bar">
@@ -118,7 +118,6 @@ const DictionaryPage = () => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

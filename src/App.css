@@ -24,9 +24,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -45,14 +42,13 @@
   .container-lg,
   .container-md,
   .container-sm {
-    --bs-gutter-x: 1rem !important;
+    overflow: hidden;
     font-size: 12px; /* Set --bs-gutter-x to 1rem for mobile view */
   }
   
-  body::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     width: 0;
     height: 0;
-    background-color: transparent;
   }
 }
 

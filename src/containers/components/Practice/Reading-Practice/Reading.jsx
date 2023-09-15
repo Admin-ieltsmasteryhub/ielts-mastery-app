@@ -4,6 +4,7 @@ import ielts11 from '../../../assets/audios/ielts11.mp3';
 import { SlArrowDown,SlArrowUp } from 'react-icons/sl';
 import {main , handleHighlight,handleDehighlight,searchOnGoogle} from './main';
 import { TbHighlight,TbHighlightOff,TbSearch } from "react-icons/tb";
+import practicecommonstyles from '../practiceCommon.module.css'
 import Button from "../../Button/Button"
 
 const Reading = () => {
@@ -32,9 +33,9 @@ const Reading = () => {
 
   return (
     <div className='container'>
-      <div className="article-page">
-        <div className="container_a">
-          <div className='title_practice_page'>
+      <div className={practicecommonstyles.practice_page_container}>
+        <div className={practicecommonstyles.practice_page_child1}>
+          <div className={practicecommonstyles.practice_page_title}>
             <h1>Reading Practice</h1>
             <h5>Get your Reading skills evaluated</h5>
           </div>
@@ -63,6 +64,7 @@ const Reading = () => {
         )}
           </div>
           </div>
+          <div className={practicecommonstyles.practice_page_child2}>
           <p>a</p>
            <p>a</p>
             <p>a</p>
@@ -92,7 +94,7 @@ const Reading = () => {
                                 <p>a</p>
                                  <p>a</p>
                                   <p>a</p>
-
+                                  </div>
         </div>
         <div className='button-container'>
 
@@ -107,7 +109,7 @@ const Reading = () => {
 </button>
 
       </div>
-        <div className="related-container">
+        <div className={practicecommonstyles.practice_page_child2}>
           <h2>Four Pillars of IELTS writing</h2>
           <ul>
             <li>Task Response</li>
