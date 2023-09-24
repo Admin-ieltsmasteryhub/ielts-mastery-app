@@ -242,10 +242,6 @@ const navLinksMobile = [
       url: "",
       subLinks: [
         {
-          display: "Welcome message",
-          url: "#",
-        },
-        {
             display: "About IELTS" ,
             url: "#",
             subLinks: [
