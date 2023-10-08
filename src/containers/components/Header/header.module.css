@@ -5,6 +5,45 @@
   border-bottom:inset ;
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* header.module.css */
+.navprop {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navprop > * {
+  margin-right: 1rem; /* Adjust the value as needed */
+}
+
+/* To remove the margin-right from the last child */
+.navprop > *:last-child {
+  margin-right: 0;
+}
+
+/* header.module.css */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 5rem; /* Adjust the value as needed */
+}
+
+/* To apply gap to child elements */
+.nav > * {
+  margin-right: 5rem; /* Adjust the value as needed */
+}
+
+/* To remove the margin-right from the last child */
+.nav > *:last-child {
+  margin-right: 0;
+}
+
 /* .logo {
   color: #e31837;
   font-weight: bolder;
