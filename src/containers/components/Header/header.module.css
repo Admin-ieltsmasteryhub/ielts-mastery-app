@@ -1,8 +1,7 @@
 .header {
   width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: inset;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   height: auto;
   position: fixed;
   background: white;

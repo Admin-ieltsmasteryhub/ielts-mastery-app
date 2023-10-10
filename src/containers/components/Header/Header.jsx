@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Container } from "reactstrap";
 import styles from "./header.module.css";
 import Links from "../NavLinks";
@@ -6,13 +6,14 @@ import nextIcon from "../../assets/images/next.png";
 import { NavLink } from "react-router-dom";
 import SearchBar from "../Blog-Components/SearchBar";
 import globalStyles from "../global.module.css"
-import { Search } from "semantic-ui-react";
+import { Progress } from "semantic-ui-react";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
   const [activeSubItem, setActiveSubItem] = useState(null);
   const [activeSubSubItem, setActiveSubSubItem] = useState(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -26,7 +27,33 @@ const Header = () => {
     setActiveSubSubItem((prevSubSubItem) => (prevSubSubItem === subSubItem ? null : subSubItem));
   };
 
-  return (
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+  };
+  
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const windowHeight = document.documentElement.clientHeight;
+  const documentHeight = document.documentElement.scrollHeight - windowHeight;
+  const scrollPercentage = (scrollPosition / documentHeight) * 100;
+
+  
+
+  return (<>
+    <style>{`
+
+      .ui.progress{
+        background: none;
+      }
+    `}</style>
     <header className={styles.header}>
       <Container fluid>
         <div className={styles.navigation}>
@@ -129,7 +156,9 @@ const Header = () => {
           </div>
         )}
       </Container>
+      <Progress percent={scrollPercentage} size='tiny' color='red' />
     </header>
+    </>
   );
 };
 
