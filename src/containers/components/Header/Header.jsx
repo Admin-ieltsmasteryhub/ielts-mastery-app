@@ -4,6 +4,9 @@ import styles from "./header.module.css";
 import Links from "../NavLinks";
 import nextIcon from "../../assets/images/next.png";
 import { NavLink } from "react-router-dom";
+import SearchBar from "../Blog-Components/SearchBar";
+import globalStyles from "../global.module.css"
+import { Search } from "semantic-ui-react";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,7 +28,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Container>
+      <Container fluid>
         <div className={styles.navigation}>
           <div className={styles.logo}>
             <h2 className={styles.navprop}>
@@ -81,6 +84,7 @@ const Header = () => {
               </ul>
             </div>
           </div>
+          <div><SearchBar/></div>
 
           <div className={styles["mobile__menu"]} onClick={toggleMobileMenu}>
             <span>

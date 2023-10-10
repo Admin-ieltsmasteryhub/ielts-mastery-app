@@ -2,7 +2,11 @@
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  border-bottom:inset ;
+  border-bottom: inset;
+  height: auto;
+  position: fixed;
+  background: white;
+  z-index: 9999;
 }
 
 .navigation {
@@ -55,7 +59,7 @@
   padding: 0;
   list-style: none;
   display: flex;
-  column-gap: 1.3rem;
+  column-gap: 2rem;
 }
 
 .nav__item {

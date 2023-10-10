@@ -23,6 +23,8 @@
     "reactstrap": "^9.2.0",
     "redux": "^4.2.1",
     "remixicon": "^3.3.0",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.4",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Search } from 'semantic-ui-react';
 import _ from 'lodash';
-import styles from '../global.module.css'
 
 
 const initialState = { isLoading: false, results: [], value: '' };
 
-export default class SearchBar extends Component {
+export default class TempComp extends Component {
   state = initialState;
 
   handleResultSelect = (e, { result }) => this.setState({ value: result.title });
@@ -44,51 +43,11 @@ export default class SearchBar extends Component {
 
     return (
       <>
-      <style>
-          {`
-            .ui.icon.input > i.icon {
-              color: #e31837;
-              
-            }
-
-            .ui.search .prompt {
-              border-radius: 0rem;
-              width: 250px;
-            }
-            .ui.input>input:focus{
-              box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-              border-color: gainsboro;
-            }
-
-            .ui.input:hover {
-              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            }
-
-            .ui.search>.results {
-              top: auto;
-              left: auto;
-              position: fixed;
-              max-height: 200px;
-              overflow-y: auto;
-            }
-
-            .container-fluid{
-              --bs-gutter-x: 3rem;
-            }
-
-            @media only screen and (max-width: 991px) {
-              .ui.search .prompt {
-                width: 210px;
-              }
-            }
-          }
-          `}
-        </style>
+      
       <Search
         input={{ icon: 
           'search',
           iconPosition: 'left' }}
-        size='tiny'
         loading={isLoading}
         onResultSelect={this.handleResultSelect}
         onSearchChange={_.debounce(this.handleSearchChange, 500, {

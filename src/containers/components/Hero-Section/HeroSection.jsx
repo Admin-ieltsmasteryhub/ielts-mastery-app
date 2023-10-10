@@ -17,12 +17,12 @@ const HeroSection = () => {
               Unlock your potential with IELTS Mastery Hub. Achieve success in the IELTS exam through expert guidance, comprehensive resources, and personalized support. Start your journey today.
               </p>
             </div>
-            <div className="search">
+            {/* <div className="search">
   <input type="text" placeholder="Search" className="search__input" />
   <button className="btn search__button">
     <i className="ri-search-line"></i>
   </button>
-</div>
+</div> */}
 
           </Col>
 

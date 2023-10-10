@@ -12,6 +12,7 @@ import Dictionary from './containers/pages/Dictionary';
 import SynonymsAntonymsPage from './containers/pages/SynonymsAntonyms';
 import IdiomsPage from './containers/pages/Idioms';
 import VocabularyPractice from './containers/pages/VocabularyPractice';
+import TempTest from './containers/pages/TempTest';
 
 
 const AppRoutes = () => {
@@ -35,6 +36,7 @@ const AppRoutes = () => {
           <Route path="/Vocabulary/synonymsantonyms" element={<SynonymsAntonymsPage/>} />
           <Route path="/Vocabulary/idioms" element={<IdiomsPage/>} />
           <Route path="/Vocabulary/vocabularybuilding" element={<VocabularyPractice/>} />
+          <Route path="/Temptest" element={<TempTest/>} />
         </Routes>
       </Router>
     );
