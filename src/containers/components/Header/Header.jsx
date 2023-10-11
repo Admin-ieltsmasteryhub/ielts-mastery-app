@@ -67,6 +67,12 @@ const Header = () => {
         #progress-bar {
           display: ${showProgressBar ? "block" : "none"}; // Show/hide progress bar based on showProgressBar state
         }
+        .ui.progress:last-child {
+          margin: 0;
+      }
+      .progress, .progress-stacked {
+        --bs-progress-height: 1;
+      }
       `}</style>
       <header className={styles.header}>
         <Container fluid>
