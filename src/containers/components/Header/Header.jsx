@@ -14,7 +14,7 @@ const Header = () => {
   const [activeSubItem, setActiveSubItem] = useState(null);
   const [activeSubSubItem, setActiveSubSubItem] = useState(null);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [showProgressBar, setShowProgressBar] = useState(false); // Added a state for showProgressBar
+  const [showProgressBar, setShowProgressBar] = useState(0); // Added a state for showProgressBar
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -61,11 +61,15 @@ const Header = () => {
     <>
       <style>{`
         .ui.progress {
-          background: none;
+          border-radius: 0;
+        }
+
+        .ui.progress .bar {
+          border-radius: 0;
         }
 
         #progress-bar {
-          display: ${showProgressBar ? "block" : "none"}; // Show/hide progress bar based on showProgressBar state
+          //display: ${showProgressBar ? "block" : "none"}; // Show/hide progress bar based on showProgressBar state
         }
         .ui.progress:last-child {
           margin: 0;
@@ -73,6 +77,12 @@ const Header = () => {
       .progress, .progress-stacked {
         --bs-progress-height: 1;
       }
+
+      .ui.red.progress .bar {
+        background-color: #e31837;
+        min-width: 0;
+    }
+
       `}</style>
       <header className={styles.header}>
         <Container fluid>
@@ -93,7 +103,7 @@ const Header = () => {
                   {Links.navLinks.map((item, index) => (
                     <li key={index} className={styles.nav__item}>
                       <NavLink
-                        className={styles["hover-underline-animation"]}
+                        //className={styles["hover-underline-animation"]}
                         to={`${item.url}`}
                       >
                         {item.display}

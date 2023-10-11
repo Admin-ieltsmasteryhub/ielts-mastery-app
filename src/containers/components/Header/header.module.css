@@ -58,6 +58,10 @@
   list-style: none;
   display: flex;
   column-gap: 2rem;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgba(0,0,0,.87);
 }
 
 .nav__item {
@@ -65,23 +69,21 @@
 }
 
 .nav__item a {
-  font-weight: 500;
-  font-size: 1.1rem;
   color: #0a2b1e;
   text-decoration: none;
 }
 
-.nav__item:hover > a,
+/* .nav__item:hover > a,
 .nav__item:hover > .sub_list {
   color: #e31837;
   text-decoration: none;
   transition: 0.3s;
-}
+} */
 
-.sub_list:hover {
+/* .sub_list:hover {
   color: #e31837;
   text-decoration: none;
-}
+} */
 
 .nav__item a:hover {
   color: #e31837;
@@ -131,14 +133,17 @@
   white-space: nowrap;
   margin: 0;
   text-align: left;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
-
+/* 
 .sub__list {
   font-size: 0.9rem;
-}
+} */
 
 .sub__item a:hover{
-  color: #fff;
+  font-weight: bold;
+  color: #0a2b1e;
 }
 
 .sub__sub__list {
@@ -150,12 +155,14 @@
   padding: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   list-style: none;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-.sub__item:hover .sub__sub__list {
+/* .sub__item:hover .sub__sub__list {
   display: block;
   transition-delay: 10s !important;
-}
+} */
 
 .sub__sub__list .sub__sub__item {
   padding: 0.5rem 1rem;
@@ -163,17 +170,18 @@
   margin: 0;
 }
 
-.sub__sub__item:hover{
+/* .sub__sub__item:hover{
     background-color: #e31837;
-}
+} */
 
 .sub__sub__item a:hover{
-    color: #fff;
+    color:#0a2b1e;
+    font-weight: bold;
 }
 
-.sub__sub__list .sub__sub__item a {
+/* .sub__sub__list .sub__sub__item a {
   font-size: 0.9rem;
-}
+} */
 
 .next__icon {
   width: 12px;
@@ -182,13 +190,13 @@
   vertical-align: middle;
 }
 
-.sub__item:hover{
+/* .sub__item:hover{
   background-color: #e31837;
   color: #fff;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
+} */
 
-.hover-underline-animation {
+/* .hover-underline-animation {
   display: inline-block;
   position: relative;
 }
@@ -209,7 +217,7 @@
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left ;
-}
+} */
 
 
 

@@ -74,14 +74,25 @@ export default class SearchBar extends Component {
 
             .container-fluid{
               --bs-gutter-x: 3rem;
+              padding-top: 20px;
+              padding-bottom: 20px;
             }
 
             @media only screen and (max-width: 991px) {
               .ui.search .prompt {
-                width: 210px;
+                width: 15px;
+                overflow: hidden; /* Hide any overflow content */
+                transition: width 0.5s ease, padding 0.5s ease; /* Add a transition for smooth width and padding changes */
+              }
+              
+              .ui.search .prompt:focus {
+                width: 180px;
+                padding-left: 0; /* Remove left padding to maintain the appearance */
+                transition: width 0.5s ease, padding 0.5s ease; /* Add a transition for smooth width and padding changes */
               }
             }
-          }
+            
+            
           `}
         </style>
       <Search
