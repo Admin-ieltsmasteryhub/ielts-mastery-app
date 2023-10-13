@@ -7,6 +7,11 @@
   z-index: 9999;
 }
 
+.header_container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .navigation {
   display: flex;
   align-items: center;

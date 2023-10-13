@@ -1,0 +1,49 @@
+/* Base styles for all screen sizes */
+.heroSection {
+  background-color: #EEEEEE;
+  padding-top: 20px;
+}
+
+.heroContent {
+  padding-top: 80px;
+}
+
+.heroTitle {
+  font-weight: 600;
+  line-height: 55px;
+}
+
+.heroText {
+  max-width: 400px;
+}
+
+.heroImage {
+  max-width: 300px;
+  height: auto;
+  
+}
+
+.hero_sec_container{
+  text-align: center;
+}
+
+/* Large screens */
+@media (min-width: 992px) {
+  .heroTitle {
+    /* Styles specific to large screens */
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .heroTitle {
+    /* Styles specific to medium screens */
+  }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+  .heroTitle {
+    /* Styles specific to small screens */
+  }
+}

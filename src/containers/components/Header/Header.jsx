@@ -5,7 +5,6 @@ import Links from "../NavLinks";
 import nextIcon from "../../assets/images/next.png";
 import { NavLink } from "react-router-dom";
 import SearchBar from "../Blog-Components/SearchBar";
-import globalStyles from "../global.module.css";
 import { Progress } from "semantic-ui-react";
 
 const Header = () => {
@@ -82,10 +81,13 @@ const Header = () => {
         background-color: #e31837;
         min-width: 0;
     }
+    .container-fluid{
+      --bs-gutter-x: 10rem;
+    }
 
       `}</style>
       <header className={styles.header}>
-        <Container fluid>
+        <Container fluid className={styles.header_container}>
           <div className={styles.navigation}>
             <div className={styles.logo}>
               <h2 className={styles.navprop}>

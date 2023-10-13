@@ -1,33 +1,30 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import heroImg from "../../assets/images/hero-img1.png";
-import "./hero-section.css";
+import heroImg from "../../assets/images/hero-sec-1.png";
+import styles from "./hero-section.module.css";
 
 const HeroSection = () => {
   return (
-    <section>
-      <Container>
+    <section className={styles.heroSection}>
+      <Container fluid>
         <Row>
-          <Col lg="6" md="6">
-            <div className="hero__content">
-              <h2 className="mb-4 hero__title">
-                Anytime Anywhere <br /> Learn on your <br /> Suitable Schedule
+          <Col>
+            <div className={styles.heroContent}>
+              <h2 className={styles.heroTitle}>
+                Learn on your Suitable Schedule <br/>Anytime Anywhere <br />
               </h2>
-              <p className="mb-5">
-              Unlock your potential with IELTS Mastery Hub. Achieve success in the IELTS exam through expert guidance, comprehensive resources, and personalized support. Start your journey today.
+              <p className={styles.heroText}>
+                Unlock your potential with IELTS Prep through expert guidance,
+                comprehensive resources, and personalized support. Start your
+                journey today.
               </p>
             </div>
-            {/* <div className="search">
-  <input type="text" placeholder="Search" className="search__input" />
-  <button className="btn search__button">
-    <i className="ri-search-line"></i>
-  </button>
-</div> */}
-
           </Col>
 
-          <Col lg="6" md="6">
-            <img src={heroImg} alt="" className="w-100 hero__img" />
+          <Col>
+          <div className={styles.hero_sec_container}>
+            <img src={heroImg} alt="" className={styles.heroImage} />
+          </div>
           </Col>
         </Row>
       </Container>

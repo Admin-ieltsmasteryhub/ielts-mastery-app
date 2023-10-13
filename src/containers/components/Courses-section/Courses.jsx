@@ -3,7 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import courseImg1 from "../../assets/images/web-design.png";
 import courseImg2 from "../../assets/images/graphics-design.png";
 import courseImg3 from "../../assets/images/ui-ux.png";
-import "./courses.css";
+import styles from "./courses-section.module.css";
 import CourseCard from "./CourseCard";
 
 const coursesData = [
@@ -40,7 +40,7 @@ const Courses = () => {
     <section>
       <Container>
         <Row>
-          <div className="centered--content">
+          <div className={styles.centered_content}>
       <h2>Our Popular Courses</h2>
       <p>
       Unlock your potential with IELTS Mastery Hub. Achieve success in the IELTS exam through expert guidance, comprehensive resources, and personalized support. Start your journey today.

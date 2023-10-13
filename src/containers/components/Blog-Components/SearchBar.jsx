@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Search } from 'semantic-ui-react';
 import _ from 'lodash';
-import styles from '../global.module.css'
+
 
 
 const initialState = { isLoading: false, results: [], value: '' };
@@ -72,12 +72,6 @@ export default class SearchBar extends Component {
               overflow-y: auto;
             }
 
-            .container-fluid{
-              --bs-gutter-x: 3rem;
-              padding-top: 20px;
-              padding-bottom: 20px;
-            }
-
             @media only screen and (max-width: 991px) {
               .ui.search .prompt {
                 width: 15px;
@@ -95,6 +89,7 @@ export default class SearchBar extends Component {
             
           `}
         </style>
+        <div>
       <Search
         input={{ icon: 
           'search',
@@ -111,6 +106,7 @@ export default class SearchBar extends Component {
         }))}
         value={value}
       />
+      </div>
       </>
     );
   }
