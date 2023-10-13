@@ -32,23 +32,27 @@
   line-height: 2rem;
 }
 
-.course__top__left h2 {
-  font-weight: 600;
-  text-align: center;
-}
-
-.course__top__left {
-  text-align: center;
-}
-
-.course__top__left p {
-  text-align: center;
-}
-
-.centered__content {
+.centered--content {
   margin-top: 40px;
 }
 
 .course__btn {
   margin-bottom: -40px;
+}
+
+.centered_content{
+  text-align: center;
+  padding: 20px 0 20px 0;
+}
+
+.centered_content p{
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+.course_all_link{
+  text-align: center;
+  text-decoration: none;
+  color:red ;
 }
