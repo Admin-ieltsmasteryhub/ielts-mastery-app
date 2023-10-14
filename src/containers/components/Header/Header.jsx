@@ -81,9 +81,7 @@ const Header = () => {
         background-color: #e31837;
         min-width: 0;
     }
-    .container-fluid{
-      --bs-gutter-x: 10rem;
-    }
+    
 
       `}</style>
       <header className={styles.header}>

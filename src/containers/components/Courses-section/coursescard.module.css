@@ -52,3 +52,15 @@
 .course_btn {
   margin-bottom: -40px;
 }
+
+.main_design{
+  flex-direction: column;
+  display: flex;
+  margin-left: auto;
+  min-width: fit-content;
+}
+
+.design{
+  display: flex;
+  margin-left: auto;
+}

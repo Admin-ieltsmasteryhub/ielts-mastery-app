@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+.container-fluid{
+  --bs-gutter-x: 10rem !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -43,7 +47,8 @@
   .container-md,
   .container-sm {
     overflow: hidden;
-    font-size: 12px; /* Set --bs-gutter-x to 1rem for mobile view */
+    font-size: 12px; 
+    --bs-gutter-x: 1rem !important; /* Set --bs-gutter-x to 1rem for mobile view */
   }
   
   ::-webkit-scrollbar {

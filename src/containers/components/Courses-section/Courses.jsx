@@ -45,7 +45,7 @@ const coursesData = [
 const Courses = () => {
   return (
     <section>
-      <Container fluid>
+      <div className='container_course'>
         <Row >
           <div className={styles.centered_content}>
             <h2>Our Popular Courses</h2>
@@ -64,7 +64,7 @@ const Courses = () => {
             </Col>
           ))}
         </Row>
-      </Container>
+      </div>
     </section>
   );
 };

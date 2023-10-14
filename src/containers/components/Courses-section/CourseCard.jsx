@@ -3,7 +3,7 @@ import styles from './coursescard.module.css'
 
 const CourseCard = (props) => {
   const { imgUrl, title, lesson, students, rating } = props.item;
-
+  
   return (
     <div className={styles.single_course_item}>
       <div className={styles.course_img}>
@@ -11,18 +11,17 @@ const CourseCard = (props) => {
       </div>
 
       <div className={styles.course_details}>
-        <h6 className={styles.course_title}>{title}</h6>
+        
 
-        <div className="d-flex justify-content-between align-items-center">
-          <p className={`${styles.lesson} d-flex align-items-center gap-1`}>
-            <i className="ri-book-open-line"></i> {lesson} Lessons
-          </p>
-
-          <p className={`${styles.students} d-flex align-items-center gap-1`}>
-            <i className="ri-user-line"></i> {students}K
-          </p>
+        <div className={styles.design}>
+        <h6>{title}</h6>
+          <span className={styles.main_design}>
+            
+            <i className="ri-book-open-line">{lesson} Lessons</i>
+            <i className="ri-user-line">{students}K</i>
+          </span>
         </div>
-
+{/* 
         <div className="d-flex justify-content-between align-items-center">
           <p className={`${styles.rating} d-flex align-items-center gap-1`}>
             <i className="ri-star-fill"></i> {rating}K
@@ -31,7 +30,7 @@ const CourseCard = (props) => {
           <p className={`${styles.enroll} d-flex align-items-center gap-1`}>
             <a href="facebook.com"> Enroll Now</a>
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
