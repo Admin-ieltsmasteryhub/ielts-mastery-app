@@ -53,7 +53,7 @@ const FreeCourse = () => {
             </div>
           </Col>
           {freeCourseData.map((item) => (
-            <Col lg="3" md="4" className="mb-4" key={item.id}>
+            <Col md="4" className="mb-4" key={item.id}>
               <FreeCourseCard item={item} />
             </Col>
           ))}

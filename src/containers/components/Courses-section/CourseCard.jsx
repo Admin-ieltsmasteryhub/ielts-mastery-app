@@ -1,5 +1,9 @@
 import React from "react";
 import styles from './coursescard.module.css'
+import { Button } from "semantic-ui-react";
+import PostButton from "../Button/Button";
+
+
 
 const CourseCard = (props) => {
   const { imgUrl, title, lesson, students, rating } = props.item;
@@ -21,6 +25,7 @@ const CourseCard = (props) => {
             <i className="ri-user-line">{students}K</i>
           </span>
         </div>
+        <PostButton buttonText='Enroll Now'/> 
 {/* 
         <div className="d-flex justify-content-between align-items-center">
           <p className={`${styles.rating} d-flex align-items-center gap-1`}>

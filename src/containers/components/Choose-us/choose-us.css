@@ -1,5 +1,12 @@
+.section_chooseus{
+    background-color: #EEEEEE;
+    padding-top: 20px;
+}
+
 .choose__img img {
   border-radius: 15px;
+  width: inherit;
+  height: auto;
 }
 
 .choose__content {

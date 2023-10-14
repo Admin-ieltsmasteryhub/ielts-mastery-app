@@ -7,7 +7,6 @@
 }
 
 .course__img img {
-  border-radius: 10px;
   margin-bottom: 20px;
 }
 
@@ -59,4 +58,12 @@
   text-align: center;
   text-decoration: none;
   color:red ;
+  font-weight: 400;
+}
+
+.course_all_link:hover{
+  text-align: center;
+  text-decoration: underline;
+  color:red ;
+  font-weight: 500;
 }

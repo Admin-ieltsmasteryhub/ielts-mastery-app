@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import heroImg from "../../assets/images/hero-sec-1.png";
 import styles from "./hero-section.module.css";
+import PostButton from "../Button/Button";
+
 
 const HeroSection = () => {
   return (
@@ -18,6 +20,7 @@ const HeroSection = () => {
                 comprehensive resources, and personalized support. Start your
                 journey today.
               </p>
+              <PostButton buttonText='Start Your Journey Today'/>
             </div>
           </Col>
 

@@ -1,4 +1,4 @@
-.post-button {
+/* .post-button {
     position: relative;
     right: 1px;
     z-index: 1;
@@ -19,6 +19,40 @@
     width: 100%;
     height: 0;
     background-color: #000;
+    transition: height 0.3s ease;
+    z-index: -1;
+  }
+  
+  .post-button:hover::before {
+    height: 100%;
+  }
+  
+  .post-button:hover {
+    color: #fff;
+  } */
+
+  .post-button {
+    position: relative;
+    right: 1px;
+    z-index: 1;
+    padding: 4px 25px !important;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border: 1px solid #e31837;
+    color: #e31837;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    font-weight: bold;
+  }
+  
+  .post-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #e31837;
     transition: height 0.3s ease;
     z-index: -1;
   }

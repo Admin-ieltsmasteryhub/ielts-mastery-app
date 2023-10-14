@@ -45,7 +45,7 @@ const coursesData = [
 const Courses = () => {
   return (
     <section>
-      <div className='container_course'>
+      <Container fluid>
         <Row >
           <div className={styles.centered_content}>
             <h2>Our Popular Courses</h2>
@@ -55,16 +55,16 @@ const Courses = () => {
               and personalized support. Start your journey today.
             </p>
           </div>
-          <Col lg="12" className={styles.course_all_link}>
-            <NavLink to={'/dictionary'}>View All <HiArrowRight></HiArrowRight></NavLink>
-          </Col>
+          <div className={styles.course_all_link}>
+            <NavLink className={styles.course_all_link} to={'/dictionary'}>View All <HiArrowRight></HiArrowRight></NavLink>
+          </div>
           {coursesData.map((item) => (
-            <Col lg="3" md="8" sm="8" key={item.id}>
+            <Col md="3" key={item.id}>
               <CourseCard item={item} />
             </Col>
           ))}
         </Row>
-      </div>
+      </Container>
     </section>
   );
 };

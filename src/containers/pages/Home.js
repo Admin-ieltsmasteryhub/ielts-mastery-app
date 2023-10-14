@@ -22,12 +22,12 @@ const Home = () => {
     <Fragment>
       <Header />
       <HeroSection />
-      <CompanySection />
-      <AboutUs />
       <Courses />
       <ChooseUs />
+      <CompanySection />
+      <AboutUs />
       <Features />
-      <FreeCourse />
+      {/* <FreeCourse /> */}
       <Testimonials />
       <Newsletter />
       <Footer />
