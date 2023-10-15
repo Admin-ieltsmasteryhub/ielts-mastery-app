@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import "./features.css";
+import styles from "./features.module.css";
 
 const FeatureData = [
   {
@@ -25,15 +25,15 @@ const FeatureData = [
 const Features = () => {
   return (
     <section>
-      <Container>
+      <Container fluid>
         <Row>
+        <div className={styles.choose__content}>
+              <h2>Key Features</h2>
+            </div>
           {FeatureData.map((item, index) => (
-            <Col lg="4" md="6" key={index}>
-              <div className="single__feature text-center px-4">
-                <h2 className="mb-3">
-                  <i class={item.icon}></i>
-                </h2>
-                <h6>{item.title}</h6>
+            <Col lg="4" md="6" key={index} className="d-flex align-items-stretch">
+              <div className={styles.single__feature}>
+                <h6> <i class={item.icon}></i>{item.title}</h6>
                 <p>{item.desc}</p>
               </div>
             </Col>

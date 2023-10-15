@@ -1,0 +1,29 @@
+.single__feature h2 i {
+  font-size: 2.5rem;
+}
+
+.single__feature h6 {
+  font-weight: 600;
+  text-align: center;
+}
+
+.single__feature{
+border: solid;
+border-width: thin;
+border-color: #cecece;
+padding: 20px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+margin: 10px;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+}
+
+.choose__content {
+padding: 50px;
+}
+
+.choose__content h2 {
+  font-weight: 600;
+  text-align: center;
+}
