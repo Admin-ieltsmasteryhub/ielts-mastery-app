@@ -24,9 +24,10 @@ const Home = () => {
       <HeroSection />
       <Courses />
       <ChooseUs />
+      <Features />
       <CompanySection />
       <AboutUs />
-      <Features />
+      
       {/* <FreeCourse /> */}
       <Testimonials />
       <Newsletter />

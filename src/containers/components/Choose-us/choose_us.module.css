@@ -1,16 +1,16 @@
 .section_chooseus{
     background-color: #EEEEEE;
-    padding-top: 20px;
 }
 
 .choose__img img {
-  border-radius: 15px;
   width: inherit;
-  height: auto;
+  max-height: 350px;
+
 }
 
 .choose__content {
   padding-right: 50px;
+  padding-top:40px ;
 }
 
 .choose__content h2 {
@@ -24,7 +24,6 @@
   width: 100%;
   height: 100%;
   z-index: 777;
-  margin-bottom: 40px ;
 }
 
 .play__icon {
@@ -47,4 +46,18 @@
   color: #e31837;
   font-size: 2rem;
   padding: 10px;
+}
+
+.course_all_link{
+  text-align: center;
+  text-decoration: none;
+  color:red ;
+  font-weight: 400;
+}
+
+.course_all_link:hover{
+  text-align: center;
+  text-decoration: underline;
+  color:red ;
+  font-weight: 500;
 }

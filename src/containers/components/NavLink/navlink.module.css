@@ -1,0 +1,13 @@
+.course_all_link{
+  text-align: center;
+  text-decoration: none;
+  color:#e31837 ;
+  font-weight: 400;
+}
+
+.course_all_link:hover{
+  text-align: center;
+  text-decoration: underline;
+  color:#e31837 ;
+  font-weight: 500;
+}
