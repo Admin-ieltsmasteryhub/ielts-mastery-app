@@ -24,8 +24,8 @@ const FeatureData = [
 
 const Features = () => {
   return (
-    <section>
-      <Container fluid>
+    <section >
+      <Container fluid className={styles.features_section}>
         <Row>
         <div className={styles.choose__content}>
               <h2>Key Features</h2>
