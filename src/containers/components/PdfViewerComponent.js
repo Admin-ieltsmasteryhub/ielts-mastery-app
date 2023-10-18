@@ -38,6 +38,13 @@ export default function PdfViewerComponent(props) {
         },
       });
 
+	    const items = PSPDFKit.defaultToolbarItems;
+console.log(items);
+const itemsToInclude = ["highlighter", "ink","zoom-mode","note","ink-eraser"];
+instance.setToolbarItems((currentItems) => {
+  return currentItems.filter((item) => itemsToInclude.includes(item.type));
+});
+
       const getFormFieldsValues = async () => {
         if (instance) {
           try {
