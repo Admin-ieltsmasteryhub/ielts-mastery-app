@@ -66,7 +66,6 @@
   .audio-player-container {
     /* Add more specific styles for the audio player container */
     position: relative;
-    z-index: 3;
   }
   
   .audio-player-container.sticky {
@@ -75,13 +74,43 @@
     background:none;
     position: fixed;
     top: 0;
-    z-index: 999;
+    z-index: 4;
     width: 100%;
     left: 0;
     right: 0;
     border-radius: 0%;
 
   }
+
+  /* Add these styles to your CSS file (e.g., listening.css) */
+
+.tab-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2; /* Background color for the tab container */
+  padding: 10px;
+}
+
+.tab-button {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #fff;
+  color: black;
+}
+
+.tab-button.active {
+  background-color:#e31837; /* Background color for the active tab */
+  color: #fff;
+}
+
+.tab-content {
+  padding: 20px;
+  background-color: #fff; /* Background color for the tab content */
+}
+
 
 
   /* Media Query for Mobile View */

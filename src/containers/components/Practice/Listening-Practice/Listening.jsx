@@ -4,6 +4,7 @@ import AudioPlayer from '../../Audio-Player/AudioPlayer';
 import ListeningQuestions from './ListeningQuestions';
 import practicecommonstyles from '../practiceCommon.module.css';
 import PdfViewerComponent from '../../PdfViewerComponent';
+import { Container } from "reactstrap";
 
 const Listening = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -24,8 +25,21 @@ const Listening = () => {
     };
   }, []);
 
-  return (
-    <div className="container">
+  return (<>
+    <style>{`
+      .rhap_container{
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .rhap_container {
+          padding-top: 0.7px;
+          padding-bottom: 5px;
+      }
+      }
+    `}</style>
+    <Container fluid>
       <div className={practicecommonstyles.practice_page_container}>
         <div className={practicecommonstyles.practice_page_child1}>
           <div>
@@ -39,12 +53,24 @@ const Listening = () => {
             >
               <AudioPlayer youtubeVideoID="uI_JZ-9_1bw" />
             </div>
-            <div>
-              <button onClick={() => setActiveTab('pdfViewer')}>Pdf Viewer</button>
-              <button onClick={() => setActiveTab('listeningQuestions')}>Listening Questions</button>
+            <div className="tab-container">
+              <button
+                className={`tab-button ${activeTab === 'pdfViewer' ? 'active' : ''}`}
+                onClick={() => setActiveTab('pdfViewer')}
+              >
+                Paper View
+              </button>
+              <button
+                className={`tab-button ${activeTab === 'listeningQuestions' ? 'active' : ''}`}
+                onClick={() => setActiveTab('listeningQuestions')}
+              >
+                Digital View
+              </button>
             </div>
-            {activeTab === 'pdfViewer' && <PdfViewerComponent document="/sample.pdf" />}
-            {activeTab === 'listeningQuestions' && <ListeningQuestions />}
+            <div className="tab-content">
+              {activeTab === 'pdfViewer' && <PdfViewerComponent document="/document.pdf" />}
+              {activeTab === 'listeningQuestions' && <ListeningQuestions />}
+            </div>
           </div>
         </div>
         <div className={practicecommonstyles.practice_page_child2}>
@@ -57,8 +83,8 @@ const Listening = () => {
           </ul>
         </div>
       </div>
-    </div>
-  );
+    </Container>
+    </>);
 };
 
 export default Listening;
