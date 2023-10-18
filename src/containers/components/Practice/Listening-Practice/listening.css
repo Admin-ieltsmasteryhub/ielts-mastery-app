@@ -66,6 +66,7 @@
   .audio-player-container {
     /* Add more specific styles for the audio player container */
     position: relative;
+    z-index: 3;
   }
   
   .audio-player-container.sticky {
