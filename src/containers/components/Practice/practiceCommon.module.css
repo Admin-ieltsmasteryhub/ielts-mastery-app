@@ -76,7 +76,7 @@
 
 
   /* Media Query for Mobile View */
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 992px) {
     .practice_page_container {
         grid-template-columns: 1fr; /* Single column for mobile view */
       }

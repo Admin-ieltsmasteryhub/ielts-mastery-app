@@ -43,6 +43,15 @@
   color:red ;
 }
 
+.title{
+  color: #000;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
 /* .free__btn::before {
   content: "";
   position: absolute;

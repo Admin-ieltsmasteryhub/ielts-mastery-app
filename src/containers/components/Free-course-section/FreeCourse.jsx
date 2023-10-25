@@ -6,8 +6,7 @@ import courseImg02 from "../../assets/images/kids-learning.png";
 import courseImg03 from "../../assets/images/seo.png";
 import courseImg04 from "../../assets/images/ui-ux.png";
 import FreeCourseCard from "./FreeCourseCard";
-
-import "./free-course.css";
+import styles from "./free-course.module.css"
 
 const freeCourseData = [
   {
@@ -47,9 +46,9 @@ const FreeCourse = () => {
     <section>
       <Container>
         <Row>
-          <Col lg="12" className="text-center mb-5">
-            <div className="free__course__title">
-            <h2 className="fw-bold">Our Free Courses</h2>
+          <Col>
+            <div className={styles.free__course__title}>
+            <div className={styles.title}>Our Free Courses</div>
             </div>
           </Col>
           {freeCourseData.map((item) => (

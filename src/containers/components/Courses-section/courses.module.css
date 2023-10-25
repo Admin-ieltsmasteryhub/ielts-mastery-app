@@ -46,24 +46,39 @@
 .centered_content{
   text-align: center;
   padding: 20px 0 20px 0;
+  color: #000;
+font-family: Poppins;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 }
 
-.centered_content p{
+.centered_content_p{
+  color: #000;
   text-align: center;
-  max-width: 700px;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 866px !important;
   margin: auto;
+  margin-bottom: 12px;
 }
 
 .course_all_link{
-  text-align: center;
-  text-decoration: none;
-  color:red ;
-  font-weight: 400;
+  color: #D81632;
+font-family: Poppins;
+/* font-size: 18px; */
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 177.778% */
+text-transform: uppercase;
+text-align: center;
 }
 
 .course_all_link:hover{
-  text-align: center;
+  color: #D81632;
   text-decoration: underline;
-  color:red ;
-  font-weight: 500;
 }

@@ -1,7 +1,15 @@
 /* Base styles for all screen sizes */
+
 .heroSection {
+  display: flex;
+  background-image: url('../../assets//images/herosec.jpg');
+  background-size: cover; /* You can adjust this to 'contain' or other values */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
   background-color: #EEEEEE;
-  padding-top: 20px;
+  background-position: center; /* A fallback background color */
+  height: 600px;
+  flex-shrink: 0;
+  font-family: "Poppins";
 }
 
 .heroContent {
@@ -9,12 +17,20 @@
 }
 
 .heroTitle {
+  color: #FFF;
+  font-size: 48px;
+  font-style: normal;
   font-weight: 600;
-  line-height: 55px;
+  line-height: normal;
 }
 
 .heroText {
-  max-width: 400px;
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+  width: 500px;
 }
 
 .heroImage {
@@ -25,6 +41,37 @@
 
 .hero_sec_container{
   text-align: center;
+}
+
+.hero_action_button{
+  background: #D81632;
+  width: 278px;
+  height: 51px;
+  flex-shrink: 0;
+  display: flex;
+  color: #FFF;
+}
+
+.hero_action_button_text{
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.hero_action_button:hover{
+  color: #D81632;
+  border: 1.5px solid;
+  background: rgba(255, 255, 255, 0.00);
+}
+
+#arrow_forward_2 {
+  fill: #FF5733; /* Set the desired color here */
 }
 
 /* Large screens */

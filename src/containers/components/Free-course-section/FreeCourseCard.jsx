@@ -1,21 +1,21 @@
 import React from "react";
 import Button from "../Button/Button"
-import './free-course.css'
+import styles from './free-course.module.css'
 
 const FreeCourseCard = (props) => {
   const { imgUrl, title, students, rating } = props.item;
 
   return (
-    <div className="single__free__course">
-      <div className="free__course__img">
+    <div className={styles.single__free__course}>
+      <div className={styles.free__course__img}>
         <img src={imgUrl} alt="" className="w-100" />
-        <div className="free__btn"><Button buttonText="Free"/></div>
+        <div className={styles.free__btn}><Button buttonText="Free"/></div>
       </div>
 
-      <div className="free__course__details">
+      <div className={styles.free__course__details}>
         <h6>{title}</h6>
 
-        <div className=" d-flex align-items-center gap-5">
+        <div className="d-flex align-items-center gap-5">
           <span className=" d-flex align-items-center gap-2">
             <i class="ri-user-line"></i> {students}k
           </span>

@@ -1,5 +1,6 @@
 .App {
   text-align: left;
+  font-family: "Poppins";
 }
 
 .App-logo {
@@ -9,6 +10,9 @@
 
 .container-fluid{
   --bs-gutter-x: 10rem !important;
+}
+body {
+  font-family: "Poppins";
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -3,7 +3,6 @@ import { Container, Row, Col } from "reactstrap";
 import chooseImg from "../../assets/images/why-choose-us.png";
 import styles from "./choose_us.module.css";
 import ReactPlayer from "react-player";
-import NavButton from "../NavLink/NavLink";
 
 const ChooseUs = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -13,11 +12,11 @@ const ChooseUs = () => {
         <Row>
           <Col lg="6" md="6">
             <div className={styles.choose__content}>
-              <h2>Why Choose Us</h2>
-              <p>
+              <div className={styles.choose__content_h}>Why Choose Us</div>
+              <div className={styles.choose__content_p}>
               Choose us for your IELTS preparation because we offer personalized study plans, experienced tutors, realistic practice tests, and proven strategies. Our focus is on your success, providing you with the confidence and skills needed to excel in the IELTS exam and achieve your desired results.
-              </p>
-              <NavButton/>
+              </div>
+              
             </div>
           </Col>
 

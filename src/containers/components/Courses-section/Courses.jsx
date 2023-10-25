@@ -47,17 +47,14 @@ const Courses = () => {
     <section>
       <Container fluid>
         <Row >
-          <div className={styles.centered_content}>
-            <h2>Our Popular Courses</h2>
-            <p>
+            <div className={styles.centered_content}>Our Popular Courses</div>
+            <div className={styles.centered_content_p}>
               Unlock your potential with IELTS Mastery Hub. Achieve success in
               the IELTS exam through expert guidance, comprehensive resources,
               and personalized support. Start your journey today.
-            </p>
-          </div>
-          <div className={styles.course_all_link}>
-            <NavLink className={styles.course_all_link} to={'/dictionary'}>View All <HiArrowRight></HiArrowRight></NavLink>
-          </div>
+            </div>
+          
+            <NavLink className={styles.course_all_link} to={'/dictionary'}>View All Courses</NavLink>
           {coursesData.map((item) => (
             <Col md="3" key={item.id}>
               <CourseCard item={item} />
