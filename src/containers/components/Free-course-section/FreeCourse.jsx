@@ -43,19 +43,11 @@ const freeCourseData = [
 
 const FreeCourse = () => {
   return (
-    <section>
-      <Container>
+    <section >
+      <Container fluid className={styles.questionssec}>
         <Row>
-          <Col>
-            <div className={styles.free__course__title}>
-            <div className={styles.title}>Our Free Courses</div>
-            </div>
-          </Col>
-          {freeCourseData.map((item) => (
-            <Col md="4" className="mb-4" key={item.id}>
-              <FreeCourseCard item={item} />
-            </Col>
-          ))}
+        <Col><div className={styles.questionform}> This is it</div></Col>
+          
         </Row>
       </Container>
     </section>
