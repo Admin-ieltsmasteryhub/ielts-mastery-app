@@ -1,73 +1,24 @@
-.free__course__img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 9;
+.questionssec{
+  
+  background-image: url('../../assets//images/questionsec.jpg');
+  background-size: cover; /* You can adjust this to 'contain' or other values */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-color: #EEEEEE;
+  background-position: center; /* A fallback background color */
+  min-height: 550px;
+  height: auto;
+  flex-shrink: 0;
+  font-family: "Poppins";
 }
 
-.free__course__img img {
-  border-radius: 10px;
+.questionform{
+  background: #EEEEEE;
+  z-index: 1;
+  width: 50%;
+min-height: 500px;
+height: auto;
+  flex-shrink: 0;
+  margin-top: 24px !important;
+  margin-bottom: 24px;
+  float: right;
 }
-
-.free__course__details h6 {
-  font-weight: 600;
-  line-height: 2rem;
-}
-
-.free__course__title{
-  margin-top: 20px;
-}
-
-.free__course__title p{
-  text-align: center;
-  max-width: 700px;
-  margin: auto;
-  padding-bottom: 20px;
-}
-
-.free__btn {
-  padding: 6px 25px;
-  text-align: right;
-}
-
-.course_all_link{
-  text-decoration: none;
-  font-weight: 500;
-  color:red ;
-}
-
-.course_all_link:hover{
-  text-decoration: underline;
-  color:red ;
-}
-
-.title{
-  color: #000;
-  font-family: Poppins;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-/* .free__btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: #000;
-  transition: height 0.3s ease;
-  z-index: -1;
-}
-
-.free__btn:hover::before {
-  height: 100%;
-}
-
-.free__btn:hover {
-  color: #fff;
-} */
