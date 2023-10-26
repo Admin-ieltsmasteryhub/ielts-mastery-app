@@ -1,20 +1,24 @@
 import React from "react";
-import "./newsletter.css";
 import { Container, Row, Col } from "reactstrap";
+import styles from './newsletter.module.css';
+import { EmailOutlined} from "@mui/icons-material";
 
 const Newsletter = () => {
   return (
     <section>
-      <Container className="newsletter">
+      <Container fluid className={styles.newsletter}>
         <Row>
           <Col lg="12" className="text-center">
-            <h2 className="mb-4">Subscribe Our Newsletter</h2>
-            <div className="subscribe">
-  <input type="email" placeholder="Email" className="subscribe__input" />
-  <button className="subscribe__button">
-  <i className="ri-mail-fill"></i>
+            <div className={styles.newsletter_heading} >Subscribe Our Newsletter</div>
+            <div className={styles.newsletter_para} >Stay updated with our newsletter!</div>
+            <div className={styles.input_container}>
+            <EmailOutlined style={{position:'absolute', color:'red'}}/>
+  <input type="email" placeholder="Email Address" className={styles.subscribe__input} />
+  </div>
+  <button className={styles.subscribe__button}>
+  
   </button>
-</div>
+
           </Col>
         </Row>
       </Container>
