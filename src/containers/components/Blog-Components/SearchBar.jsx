@@ -74,15 +74,16 @@ export default class SearchBar extends Component {
 
             @media only screen and (max-width: 991px) {
               .ui.search .prompt {
-                width: 15px;
+                width:0;
+                border: none;
                 overflow: hidden; /* Hide any overflow content */
                 transition: width 0.5s ease, padding 0.5s ease; /* Add a transition for smooth width and padding changes */
               }
               
               .ui.search .prompt:focus {
+                border:1px solid rgba(34,36,38,.15);
                 width: 180px;
-                padding-left: 0; /* Remove left padding to maintain the appearance */
-                transition: width 0.5s ease, padding 0.5s ease; /* Add a transition for smooth width and padding changes */
+                transition: width 0.5s ease, 0.5s ease; /* Add a transition for smooth width and padding changes */
               }
             }
             

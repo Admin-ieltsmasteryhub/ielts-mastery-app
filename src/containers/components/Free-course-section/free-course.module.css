@@ -1,6 +1,6 @@
 .questionssec{
   
-  background-image: url('../../assets//images/questionsec.jpg');
+  background-image: url('../../assets/images/questionssec.jpg');
   background-size: cover; /* You can adjust this to 'contain' or other values */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-color: #EEEEEE;
@@ -15,8 +15,8 @@
   background: #EEEEEE;
   z-index: 1;
   width: 50%;
-min-height: 500px;
-height: auto;
+  min-height: 500px;
+  height: auto;
   flex-shrink: 0;
   margin-top: 24px !important;
   margin-bottom: 24px;

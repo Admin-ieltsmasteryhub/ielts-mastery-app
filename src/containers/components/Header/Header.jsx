@@ -6,6 +6,7 @@ import nextIcon from "../../assets/images/next.png";
 import { NavLink } from "react-router-dom";
 import SearchBar from "../Blog-Components/SearchBar";
 import { Progress } from "semantic-ui-react";
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -167,13 +168,13 @@ const Header = () => {
                 </ul>
               </div>
             </div>
-            <div>
+            <div className={styles.search_bar}>
               <SearchBar />
             </div>
-            <div className={styles["mobile__menu"]} onClick={toggleMobileMenu}>
-              <span>
-                <i className="ri-menu-line"></i>
-              </span>
+            <div className={styles["mobile__menu"]}>
+              <div className={styles.search_bar_mobile}><SearchBar /></div>
+              
+              <MenuIcon onClick={toggleMobileMenu}/> 
             </div>
           </div>
 

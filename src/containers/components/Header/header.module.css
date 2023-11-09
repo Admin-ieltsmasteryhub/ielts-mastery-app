@@ -228,6 +228,14 @@
 
 
 @media only screen and (max-width: 991px) {
+
+  .search_bar{
+    display: none;
+  }
+
+  .search_bar_mobile{
+    margin-right: 0.7rem;
+  }
   .nav__menu {
     position: fixed;
     top: 0;
@@ -281,7 +289,9 @@
   }
 
   .mobile__menu {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    padding-right: 0.7rem;
   }
 
   .active__menu .nav__list {

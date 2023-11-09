@@ -16,7 +16,7 @@ const FeatureData = [
   },
 
   {
-    title: "CComprehensive Study Materials",
+    title: "Comprehensive Study Materials",
     desc: "Gain access to a wide range of comprehensive study materials, including practice exercises, sample essays, and interactive learning resources, ensuring a well-rounded and effective preparation for your IELTS exam.",
     icon: "ri-contacts-book-line",
   },

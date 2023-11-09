@@ -28,7 +28,7 @@ const Home = () => {
       <CompanySection />
       {/* <AboutUs /> */}
       
-      {/* <FreeCourse /> */}
+      <FreeCourse />
       <Testimonials />
       <Newsletter />
       <Footer />
