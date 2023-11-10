@@ -77,7 +77,10 @@ export default class SearchBar extends Component {
                 width:0;
                 border: none;
                 overflow: hidden; /* Hide any overflow content */
-                transition: width 0.5s ease, padding 0.5s ease; /* Add a transition for smooth width and padding changes */
+                transition: 0.5s ease, padding 0.5s ease; /* Add a transition for smooth width and padding changes */
+              }
+              .ui.search .prompt:hover {
+                cursor:pointer;
               }
               
               .ui.search .prompt:focus {

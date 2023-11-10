@@ -196,6 +196,10 @@
   vertical-align: middle;
 }
 
+.menu:hover{
+  cursor: pointer;
+}
+
 /* .sub__item:hover{
   background-color: #e31837;
   color: #fff;
@@ -224,7 +228,6 @@
   transform: scaleX(1);
   transform-origin: bottom left ;
 } */
-
 
 
 @media only screen and (max-width: 991px) {

@@ -81,6 +81,7 @@ const Header = () => {
       .ui.red.progress .bar {
         background-color: #e31837;
         min-width: 0;
+        
     }
     
 
@@ -173,8 +174,7 @@ const Header = () => {
             </div>
             <div className={styles["mobile__menu"]}>
               <div className={styles.search_bar_mobile}><SearchBar /></div>
-              
-              <MenuIcon onClick={toggleMobileMenu}/> 
+              <div className={styles.menu}><MenuIcon onClick={toggleMobileMenu}/></div> 
             </div>
           </div>
 
