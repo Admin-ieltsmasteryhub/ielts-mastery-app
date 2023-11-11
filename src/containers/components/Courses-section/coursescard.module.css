@@ -7,14 +7,27 @@
   margin-bottom: 20px;
 }
 
-.enroll a {
+.main_design{
+  flex-direction: column;
+  display: flex;
+  margin-left: auto;
+  min-width: fit-content;
+}
+
+.design{
+  display: flex;
+  margin-left: auto;
+}
+
+
+/* .enroll a {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
   color: #e31837;
-}
+} */
 
-.lesson,
+/* .lesson,
 .students,
 .rating {
   font-size: 0.9rem;
@@ -26,8 +39,9 @@
 .students i,
 .rating i {
   font-weight: 400;
-}
+} */
 
+/* 
 .course_title {
   line-height: 2rem;
 }
@@ -51,16 +65,39 @@
 
 .course_btn {
   margin-bottom: -40px;
-}
+} */
 
-.main_design{
-  flex-direction: column;
-  display: flex;
-  margin-left: auto;
-  min-width: fit-content;
-}
+@media only screen and (max-width: 767px) {
 
-.design{
-  display: flex;
-  margin-left: auto;
+  .single_course_item {
+    padding: 15px;
+    background: #FFF;
+    box-shadow: -2px 2px 4px 0px rgba(85, 85, 85, 0.16);
+  }
+  .course_top_left h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .course_top_left p {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .enroll a {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .lesson,
+  .students,
+  .rating {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .course_btn {
+    margin-bottom: 0; /* Remove negative margin for smaller screens */
+  }
+
+  .main_design,
+  .design {
+    margin-left: 0; /* Remove margin for smaller screens */
+  }
 }

@@ -26,12 +26,6 @@ const HeroSection = () => {
               </div>
             </div>
           </Col>
-
-          {/* <Col>
-          <div className={styles.hero_sec_container}>
-            <img src={heroImg} alt="" className={styles.heroImage} />
-          </div>
-          </Col> */}
         </Row>
       </Container>
     </section>
