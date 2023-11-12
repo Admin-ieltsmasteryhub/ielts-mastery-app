@@ -1,53 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
-
-import courseImg01 from "../../assets/images/web-development.png";
-import courseImg02 from "../../assets/images/kids-learning.png";
-import courseImg03 from "../../assets/images/seo.png";
-import courseImg04 from "../../assets/images/ui-ux.png";
 import FreeCourseCard from "./FreeCourseCard";
-import styles from "./free-course.module.css"
+import styles from "./free-course.module.css";
+import PostButton from "../Button/Button";
 
 const freeCourseData = [
   {
     id: "01",
-    title: "Basic Web Development Course",
-    imgUrl: courseImg01,
-    students: 5.3,
-    rating: 1.7,
+    title: "What's your IELTS Type?",
+    options: ["General", "Academic", "Not Sure"],
   },
   {
     id: "02",
-    title: "Coding for Junior Basic Course",
-    imgUrl: courseImg02,
-    students: 5.3,
-    rating: 1.7,
+    title: "What are you currently doing?",
+    options: ["Working", "Studying", "Others"],
   },
-
   {
     id: "03",
-    title: "SEO - Basic",
-    imgUrl: courseImg03,
-    students: 5.3,
-    rating: 1.7,
-  },
-
-  {
-    id: "04",
-    title: "Basic UI/UX Design - Figma",
-    imgUrl: courseImg04,
-    students: 5.3,
-    rating: 1.7,
+    title: "When are you giving IELTS?",
+    options: ["Next Month", "Next 3 Months", "Already Booked"],
   },
 ];
 
 const FreeCourse = () => {
+  const [selectedOptions, setSelectedOptions] = useState({});
+
+  const handleOptionSelect = (questionId, option) => {
+    setSelectedOptions((prevOptions) => ({
+      ...prevOptions,
+      [questionId]: option,
+    }));
+  };
+
+  const isOptionSelected = (questionId, option) => {
+    return selectedOptions[questionId] === option;
+  };
+
+  const handleSubmit = () => {
+    // Do something with the selected options
+    console.log("Selected Options:", selectedOptions);
+  };
+
   return (
-    <section >
+    <section>
       <Container fluid className={styles.questionssec}>
         <Row>
-        <Col><div className={styles.questionform}> This is it</div></Col>
-          
+          <Col>
+            <div className={styles.question_form_container}>
+              <div className={styles.question_form_ielts}>
+                {freeCourseData.map((item) => (
+                  <div key={item.id} className={styles.questions_ielts}>
+                    {item.title}
+                    <ul className={styles.horizontal_options}>
+                      {item.options.map((option) => (
+                        <li
+                          key={option}
+                          className={`${styles.question_options} ${
+                            isOptionSelected(item.id, option)
+                              ? styles.selected_option
+                              : ""
+                          }`}
+                          onClick={() => handleOptionSelect(item.id, option)}
+                        >
+                          {option}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <div className={styles.questions_ielts_button}>
+              <PostButton  buttonText={'Continue'} onClick={handleSubmit}></PostButton>
+              </div>
+            </div>
+          </Col>
         </Row>
       </Container>
     </section>

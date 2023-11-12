@@ -11,14 +11,92 @@
   font-family: "Poppins";
 }
 
-.questionform{
+.question_form_container{
   background: #EEEEEE;
   z-index: 1;
-  width: 50%;
-  min-height: 500px;
+  min-height: 400px;
   height: auto;
   flex-shrink: 0;
   margin-top: 24px !important;
   margin-bottom: 24px;
   float: right;
+}
+
+.question_form_ielts{
+  padding:32px;
+}
+
+.questions_ielts{
+  color: #000;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.question_options{
+  border:1px solid black;
+  padding: 10px 20px 10px 20px;
+  border-radius: 4%;
+  height: 40px;
+  width: 15rem;
+  font-size: smaller;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+
+/* Add this to your CSS file */
+.horizontal_options {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0; /* Remove default padding */
+}
+
+.selected_option {
+  background-color:#e31837; /* Change this to the desired highlight color */
+  color: #EEEEEE; /* Change this to the desired text color */
+}
+
+.questions_ielts_button{
+  float: right;
+  margin: 42px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+
+  .questions_ielts{
+    margin-top: 10px;
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .question_options{
+    border:1px solid black;
+    padding: 5px 10px 5px 10px;
+    border-radius: 4%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  .question_form_container{
+    float: none;
+  }
+
+  .question_form_ielts{
+    padding:15px ;
+  }
 }
