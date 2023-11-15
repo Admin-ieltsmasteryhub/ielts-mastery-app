@@ -10,7 +10,7 @@ import Features from "../components/Feature-section/Features";
 import FreeCourse from "../components/Free-course-section/FreeCourse";
 
 import Testimonials from "../components/Testimonial/Testimonials";
-
+import Testimonial from "../components/Testimonials/Testimonial";
 import Newsletter from "../components/Newsletter/Newsletter";
 import Footer from "../components/Footer/Footer";
 import FooterCopyright from "../components/Footer-Copyright/FooterCopyright";
@@ -29,7 +29,7 @@ const Home = () => {
       {/* <AboutUs /> */}
       
       <FreeCourse />
-      <Testimonials />
+      <Testimonial />
       <Newsletter />
       <Footer />
       <FooterCopyright />

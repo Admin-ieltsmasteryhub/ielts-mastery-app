@@ -1,0 +1,85 @@
+.courses_sec_container{
+  margin-bottom: 30px;
+  background-color:#eee;
+}
+
+.single__course__item {
+  padding: 15px;
+}
+
+.course__img img {
+  margin-bottom: 20px;
+}
+
+.enroll a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #e31837;
+}
+
+.lesson,
+.students,
+.rating {
+  font-size: 0.9rem;
+  color: #0a2b1e;
+  font-weight: 500;
+}
+
+.lesson i,
+.students i,
+.rating i {
+  font-weight: 400;
+}
+
+.course__title {
+  line-height: 2rem;
+}
+
+.centered--content {
+  margin-top: 40px;
+}
+
+.course__btn {
+  margin-bottom: -40px;
+}
+
+.centered_content{
+  text-align: center;
+  padding: 80px;
+  color: #000;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: left;
+}
+
+.centered_content_p{
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 866px !important;
+  margin: auto;
+  margin-bottom: 12px;
+}
+
+.course_all_link{
+  color: #D81632;
+/* font-size: 18px; */
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 177.778% */
+text-transform: uppercase;
+text-align: center;
+text-decoration: none;
+gap:8px;
+}
+
+.course_all_link:hover{
+  color: #D81632;
+  text-decoration: underline;
+}
