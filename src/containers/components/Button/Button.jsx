@@ -1,9 +1,9 @@
 import React from 'react';
 import "./Button.css"
-function PostButton({ onClick, buttonText }) {
+function PostButton({ onClick, buttonText,icon }) {
   return (
       <button className="post-button" onClick={onClick}>
-        {buttonText}
+        {buttonText}{icon}
       </button>
   );
 }

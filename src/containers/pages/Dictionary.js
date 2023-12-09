@@ -3,7 +3,7 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import DictionaryPage from "../components/Dictionary/DictionaryPage";
 import FooterCopyright from "../components/Footer-Copyright/FooterCopyright";
-import SearchBar from "../components/Blog-Components/SearchBar";
+import SearchBar from "../components/Search-bar/SearchBar";
 import Posts from "../components/Blog-Components/Posts";
 
 const Dictionary = () => {

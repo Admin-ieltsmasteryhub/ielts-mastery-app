@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './BlogPostPage.css'; // Import a separate CSS file for custom styling
+import styles from './BlogPostPage.module.css'; // Import a separate CSS file for custom styling
 import { postsData } from './data';
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import PostCard from './PostCard';
@@ -20,41 +20,41 @@ function BlogPostPage() {
   }
 
   return (
-    <div className="blog-post-container">
-      <div className="blog-post-header">
-        <h1 className="blog-post-title">{post.title}</h1>
-        <p className="blog-post-date">Published on: {post.postDate}</p>
+    <div className={styles.blog_post_container}>
+      <div className={styles.blog_post_header}>
+        <h1 className={styles.blog_post_title}>{post.title}</h1>
+        <p className={styles.blog_post_date}>Published on: {post.postDate}</p>
       </div>
-      <div className="blog-post-content">{post.content}</div>
-      <div className="blog-post-footer">
-        <p className="blog-post-read-count">Read Count: {post.readCount}</p>
+      <div className={styles.blog_post_content}>{post.content}</div>
+      <div className={styles.blog_post_footer}>
+        <p className={styles.blog_post_read_count}>Read Count: {post.readCount}</p>
       </div>
-      <div className="blog-post-share">
+      <div className={styles.blog_post_share}>
         <p>Share this post:</p>
-        <div className="social-share-buttons">
-          <a href={post.facebookLink} className="social-icon">
+        <div className={styles.social_share_buttons}>
+          <a href={post.facebookLink} className={styles.social_icon}>
             <FaFacebook />
           </a>
-          <a href={post.twitterLink} className="social-icon">
+          <a href={post.twitterLink} className={styles.social_icon}>
             <FaTwitter />
           </a>
-          <a href={post.linkedinLink} className="social-icon">
+          <a href={post.linkedinLink} className={styles.social_icon}>
             <FaLinkedin />
           </a>
         </div>
       </div>
-      <div className="blog-post-author">
-        {/* <div className="author-image">
-          <img src={post.author.image} alt="Author" />
+      <div className={styles.blog_post_author}>
+        {/* <div className=}author_image}>
+          <img src={post.author.image} alt=}Author} />
         </div> */}
-        <div className="author-info">
+        <div className={styles.author_info}>
           <h3>{post.author.name}</h3>
           <p>{post.author.bio}</p>
         </div>
       </div>
-      <div className="blog-post-related">
+      <div className={styles.blog_post_related}>
   <h2>Related Posts</h2>
-  <div className="related-posts-container">
+  <div className={styles.related_posts_container}>
     {post.relatedPosts.map((relatedPost) => (
       <PostCard
         key={relatedPost.id}

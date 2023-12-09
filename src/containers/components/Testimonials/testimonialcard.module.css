@@ -5,130 +5,87 @@
   flex-shrink: 0;
 }
 
-.course_img{
+.course_img {
   background: linear-gradient(to bottom, #eee 50%, #fff 50%);
 }
 
-.image_testimonial{
+.image_testimonial {
   border-radius: 50%;
   width: 100px;
   height: 100px;
+  margin-left: 20px;
 }
-.main_design{
+
+.main_design {
   flex-direction: column;
   display: flex;
   margin-left: auto;
   min-width: fit-content;
 }
 
-.design{
+.design {
   display: flex;
+  flex-direction: column; /* Change to column for smaller screens */
   margin-left: auto;
   margin-top: 2rem;
   margin-left: 1.5rem;
   color: #000;
-font-family: Poppins;
-font-size: 18px;
-font-style: italic;
-font-weight: 400;
-line-height: 150%; /* 27px */
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 150%;
 }
 
-.testimonialtitle{
+.testimonialtitle {
   color: #000;
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  text-align: center; /* Center text for smaller screens */
+  margin-top: 1rem; 
+  /* Adjust margin for smaller screens */
 }
 
-.testimonial_stars{
+.testimonial_stars {
   margin-left: 1.5rem;
 }
 
-.testimonials_star_container{
+.testimonials_star_container {
   margin-top: 1.5rem;
   margin-left: 1.5rem;
 }
-
-
-/* .enroll a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #e31837;
-} */
-
-/* .lesson,
-.students,
-.rating {
-  font-size: 0.9rem;
-  color: #0a2b1e;
-  font-weight: 500;
-}
-
-.lesson i,
-.students i,
-.rating i {
-  font-weight: 400;
-} */
-
-/* 
-.course_title {
-  line-height: 2rem;
-}
-
-.course_top_left h2 {
-  font-weight: 600;
-  text-align: center;
-}
-
-.course_top_left {
-  text-align: center;
-}
-
-.course_top_left p {
-  text-align: center;
-}
-
-.centered_content {
-  margin-top: 40px;
-}
-
-.course_btn {
-  margin-bottom: -40px;
-} */
 
 @media only screen and (max-width: 767px) {
 
   .single_course_item {
     background: #FFF;
-  }
-  .course_top_left h2 {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    height: auto; /* Set height to auto for smaller screens */
   }
 
-  .course_top_left p {
-    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  .image_testimonial {
+    margin-left: 0; /* Remove left margin for smaller screens */
+    margin-bottom: 1rem; /* Add bottom margin for spacing */
   }
 
-  .enroll a {
-    font-size: 0.8rem; /* Adjust font size for smaller screens */
-  }
-
-  .lesson,
-  .students,
-  .rating {
-    font-size: 0.8rem; /* Adjust font size for smaller screens */
-  }
-
-  .course_btn {
-    margin-bottom: 0; /* Remove negative margin for smaller screens */
-  }
-
-  .main_design,
   .design {
-    margin-left: 0; /* Remove margin for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+
+  .testimonialtitle {
+    margin-top: 0; /* Remove top margin for smaller screens */
+    margin-right: 0; /* Remove right margin for smaller screens */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .testimonial_stars {
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+
+  .testimonials_star_container {
+    margin-top: 1rem; /* Adjust top margin for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
   }
 }

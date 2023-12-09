@@ -13,6 +13,8 @@ import SynonymsAntonymsPage from './containers/pages/SynonymsAntonyms';
 import IdiomsPage from './containers/pages/Idioms';
 import VocabularyPractice from './containers/pages/VocabularyPractice';
 import TempTest from './containers/pages/TempTest';
+import PracticeTestLib from './containers/pages/PracticeTestLib';
+import PracticeTests from './containers/pages/PracticeTests';
 
 
 const AppRoutes = () => {
@@ -37,6 +39,8 @@ const AppRoutes = () => {
           <Route path="/Vocabulary/idioms" element={<IdiomsPage/>} />
           <Route path="/Vocabulary/vocabularybuilding" element={<VocabularyPractice/>} />
           <Route path="/Temptest" element={<TempTest/>} />
+          <Route path="/Practice-Test-Library" element={<PracticeTestLib/>} />
+          <Route path="/Practice-Tests" element={<PracticeTests/>} />
         </Routes>
       </Router>
     );

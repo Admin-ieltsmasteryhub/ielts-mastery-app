@@ -4,7 +4,7 @@ import styles from "./header.module.css";
 import Links from "../NavLinks";
 import nextIcon from "../../assets/images/next.png";
 import { NavLink } from "react-router-dom";
-import SearchBar from "../Blog-Components/SearchBar";
+import SearchBar from "../Search-bar/SearchBar";
 import { Progress } from "semantic-ui-react";
 import MenuIcon from '@mui/icons-material/Menu';
 

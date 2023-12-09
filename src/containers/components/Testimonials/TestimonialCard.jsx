@@ -36,7 +36,7 @@ const TestimonialCard = (props) => {
     <div className={styles.single_course_item}>
       <div className={styles.course_img}>
         <img className={styles.image_testimonial} src={imgUrl} alt="" />
-        <span className={styles.testimonialtitle}>Chirag Soni</span>
+        <div className={styles.testimonialtitle}>Chirag Soni</div>
       </div>
 
       <div className={styles.course_details}>

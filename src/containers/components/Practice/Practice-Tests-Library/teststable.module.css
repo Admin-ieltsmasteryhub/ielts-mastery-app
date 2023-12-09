@@ -1,0 +1,97 @@
+/* posts.module.css */
+
+.table_container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.test_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.test_table th, .test_table td {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.test_table th {
+  background-color: #f2f2f2;
+  color: #333;
+  border-left: none;
+  border-right: none;
+  padding: 8px; /* Adjust padding as needed */
+  text-align: left;
+}
+
+.test_table td {
+  white-space: nowrap;
+  border-left: none;
+  border-right: none;
+  padding: 8px; /* Adjust padding as needed */
+  text-align: left;
+  text-align: left;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.test_table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* posts.module.css */
+
+/* Add the following CSS for difficulty level styling */
+
+.test-table td.difficulty {
+  position: relative;
+}
+
+.test-table td.difficulty span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.test-table td.difficulty.easy span {
+  background-color: #5cb85c; /* Green for easy */
+}
+
+.test-table td.difficulty.medium span {
+  background-color: #f0ad4e; /* Orange for medium */
+}
+
+.test-table td.difficulty.hard span {
+  background-color: #d9534f; /* Red for hard */
+}
+
+.testtable_icons{
+  
+}
+
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+  .test_table th, .test_table td {
+    
+  }
+
+  .test_table td button {
+    
+  }
+
+  .test_table td {
+    padding: 2px;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+}

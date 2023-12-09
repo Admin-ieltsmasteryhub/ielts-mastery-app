@@ -3,10 +3,10 @@ import styles from './navlink.module.css';
 import { NavLink } from 'react-router-dom';
 import { HiArrowRight } from 'react-icons/hi';
 
-function NavButton({ url }) {
+function NavButton({ url ,icon,linkText,textAlign}) {
   return (
-    <div className={styles.course_all_link}>
-    <NavLink className={styles.course_all_link} to={url}>View All <HiArrowRight></HiArrowRight></NavLink>
+    <div >
+    <NavLink className={styles.course_all_link} to={url}>{linkText}{icon}</NavLink>
   </div>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './posts.module.css';
 import { Link } from 'react-router-dom';
 
-function PostCard({ id, title, postDate, content, readCount }) {
+function TestLibCard({ id, title, postDate, content, readCount }) {
   return (
     <Link to={`/blog/${id}`} className={styles.post_link}>
       <div className={styles.post_card}>
@@ -18,4 +18,4 @@ function PostCard({ id, title, postDate, content, readCount }) {
   );
 }
 
-export default PostCard;
+export default TestLibCard;

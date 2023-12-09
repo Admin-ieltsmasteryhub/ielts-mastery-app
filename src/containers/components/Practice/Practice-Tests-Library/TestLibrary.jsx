@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styles from './posts.module.css';
 import { postsData } from './data';
-import PostCard from './PostCard';
-import Button from "../Button/Button"
+import TestLibCard from './TestLibCard';
+import Button from "../../Button/Button"
 
-function Posts({ title }) {
+function TestLibrary({ title }) {
   const [visiblePosts, setVisiblePosts] = useState(4);
 
   const showMorePosts = () => {
@@ -32,7 +32,7 @@ function Posts({ title }) {
       <h2 className={styles.section_title}>{title}</h2>
       <div className={styles.posts_container}>
         {sortedPosts.slice(0, visiblePosts).map(post => (
-          <PostCard
+          <TestLibCard
             key={post.id}
             id={post.id} // Add the id prop here
             title={post.title}
@@ -51,4 +51,4 @@ function Posts({ title }) {
   );
 }
 
-export default Posts;
+export default TestLibrary;

@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
+import { FaFacebook, FaTwitter, FaLinkedin,FaInstagram } from 'react-icons/fa';
 
 import "./footer.css";
 
@@ -59,30 +60,32 @@ const Footer = () => {
               <div className="follows__social">
               <div className="social__icons">
               <span>
-                {" "}
+                {/* {" "}
                 <a href="facebook.com">
                   <i class="ri-facebook-line"></i>
+                </a> */}
+                <a href='#' >
+                <FaFacebook />
+                </a>
+                
+                
+              </span>
+
+              <span>
+              <a href='#' >
+                  <FaTwitter />
                 </a>
               </span>
 
               <span>
-                {" "}
-                <a href="facebook.com">
-                  <i class="ri-instagram-line"></i>
+              <a href='#' >
+                  <FaLinkedin />
                 </a>
               </span>
 
               <span>
-                {" "}
-                <a href="facebook.com">
-                  <i class="ri-linkedin-line"></i>
-                </a>
-              </span>
-
-              <span>
-                {" "}
-                <a href="facebook.com">
-                  <i class="ri-twitter-line"></i>
+              <a href='#' >
+                  <FaInstagram />
                 </a>
               </span>
               </div>

@@ -1,0 +1,15 @@
+/* BlogPostPage.css */
+.test_sec_container{
+ background-color: #eee;
+}
+
+.tests_container{
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  min-height:600px;
+}
+
+.test_title{
+  font-size: large;
+  font-weight: 600;
+  line-height: normal;
+}

@@ -1,13 +1,17 @@
 .course_all_link{
+  color: #D81632;
+  /* font-size: 18px; */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  color:#e31837 ;
-  font-weight: 400;
+  display: flex;
+  align-items: center;
 }
 
 .course_all_link:hover{
-  text-align: center;
+  color: #D81632;
   text-decoration: underline;
-  color:#e31837 ;
-  font-weight: 500;
 }
