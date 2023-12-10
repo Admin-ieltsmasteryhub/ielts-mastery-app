@@ -88,17 +88,17 @@ const Testimonial = () => {
       color:#D81632;
     }
       `}</style>
-      <Container fluid className={styles.courses_sec_container}>
-        <Row >
+      <div className={styles.courses_sec_container}>
+        <>
             <div className={styles.centered_content}>Our Popular Courses</div>
             
-            {!isMobileView ? <>
+            {!isMobileView ? <div className={styles.cards}>
           {coursesData.map((item) => (
-            <Col md="3" key={item.id}>
+
               <TestimonialCard item={item} />
-            </Col>
             
-          ))}</>: 
+            
+          ))}</div>: 
 
           <Slider {...settings}>
             {coursesData.map((item) => (
@@ -108,8 +108,8 @@ const Testimonial = () => {
             ))}
           </Slider>
           };
-        </Row>
-      </Container>
+        </>
+      </div>
     </>
   );
 };

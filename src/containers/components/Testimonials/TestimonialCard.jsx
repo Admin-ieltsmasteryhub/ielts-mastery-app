@@ -32,22 +32,17 @@ const TestimonialCard = (props) => {
   };
 
   return (
-    
-    <div className={styles.single_course_item}>
-      <div className={styles.course_img}>
-        <img className={styles.image_testimonial} src={imgUrl} alt="" />
-        <div className={styles.testimonialtitle}>Chirag Soni</div>
-      </div>
-
-      <div className={styles.course_details}>
+    <div >
+    <div className={styles.card}>
+        <img className={styles.card_img} src={imgUrl} alt="" />
+        <div className={styles.card_p}>This is the review</div>
+        <div className={styles.card_h2}>Chirag Soni</div>
+        <div className={styles.card_h4}></div>  
         
         <div className={styles.testimonials_star_container}>
           {renderStars()}
         </div>
-        <div className={styles.design}>
-          <div>{title}</div>
         </div>
-      </div>
     </div>
   );
 };

@@ -3,6 +3,14 @@
   background-color:#eee;
 }
 
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
 .single__course__item {
   padding: 15px;
 }

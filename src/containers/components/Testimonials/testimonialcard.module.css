@@ -1,52 +1,22 @@
-.single_course_item {
-  padding-bottom: 15px;
-  background-color: #FFF;
-  height: 280px;
-  flex-shrink: 0;
+
+.card{
+  min-width: 350px;
+  height: 250px;
+  padding: 20px 30px;
+  position: relative;
+  background: #FFF;
+  margin: 10px;
+  width: auto;
 }
 
-.course_img {
-  background: linear-gradient(to bottom, #eee 50%, #fff 50%);
-}
-
-.image_testimonial {
+.card_img{
+  height: 90px;
+  width: 90px;
+  border: 2px solid #f2f2f2 ;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin-left: 20px;
-}
-
-.main_design {
-  flex-direction: column;
-  display: flex;
-  margin-left: auto;
-  min-width: fit-content;
-}
-
-.design {
-  display: flex;
-  flex-direction: column; /* Change to column for smaller screens */
-  margin-left: auto;
-  margin-top: 2rem;
-  margin-left: 1.5rem;
-  color: #000;
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 150%;
-}
-
-.testimonialtitle {
-  color: #000;
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-align: center; /* Center text for smaller screens */
-  margin-top: 1rem; 
-  /* Adjust margin for smaller screens */
+  position: absolute;
+  top: -48px;
+  left: 21px;
 }
 
 .testimonial_stars {
