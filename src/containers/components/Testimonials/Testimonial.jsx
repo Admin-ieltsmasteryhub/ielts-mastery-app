@@ -61,7 +61,7 @@ const Testimonial = () => {
     slidesToScroll: 1,
     arrows: false,
   };
-  const isMobileView = useMediaQuery({ maxWidth: 767 });
+  const isMobileView = useMediaQuery({ maxWidth: 968 });
   return (
     
     <>
@@ -94,9 +94,9 @@ const Testimonial = () => {
             
             {!isMobileView ? <div className={styles.cards}>
           {coursesData.map((item) => (
-
+            <Col md="3" key={item.id}>
               <TestimonialCard item={item} />
-            
+              </Col>
             
           ))}</div>: 
 

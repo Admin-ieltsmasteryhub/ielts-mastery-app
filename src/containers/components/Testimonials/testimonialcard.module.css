@@ -1,12 +1,10 @@
 
 .card{
-  min-width: 350px;
   height: 250px;
   padding: 20px 30px;
   position: relative;
   background: #FFF;
   margin: 10px;
-  width: auto;
 }
 
 .card_img{
