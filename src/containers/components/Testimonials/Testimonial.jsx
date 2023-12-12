@@ -16,34 +16,34 @@ import "slick-carousel/slick/slick-theme.css";
 const coursesData = [
   {
     id: "01",
-    title: "Web Design BootCamp-2022 for Beginners",
-    lesson: 12,
-    students: 12.5,
+    name: "Chirag Soni",
+    designation:"Software Developer",
     rating: 4,
+    review: "This is the review",
     imgUrl: courseImg1,
   },
   {
     id: "02",
-    title: "Professional Graphics Design, PhotoShop, Adobe XD, Figma",
-    lesson: 12,
-    students: 12.5,
+    name: " David Beck",
+    designation:"Software Developer",
     rating: 4.5,
+    review: "This is the review",
     imgUrl: courseImg2,
   },
   {
     id: "03",
-    title: "UI/UX BootCamp for Beginners in 2022",
-    lesson: 12,
-    students: 12.5,
+    name: "Betty Anchor",
+    designation:"Software Developer",
     rating: 4,
+    review: "This is the review",
     imgUrl: courseImg3,
   },
   {
     id: "04",
-    title: "UI/UX BootCamp for Beginners in 2022",
-    lesson: 12,
-    students: 12.5,
+    name: "Trevis Corner",
+    designation:"Software Developer",
     rating: 3,
+    review: "This is the review",
     imgUrl: courseImg3,
   },
 ];
@@ -66,6 +66,10 @@ const Testimonial = () => {
     
     <>
     <style>{`
+     .slick-list{
+      overflow: visible;
+     }
+
      .slick-dots {
       list-style: disc;
       justify-content: center;

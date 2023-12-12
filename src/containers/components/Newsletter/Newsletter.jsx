@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import styles from './newsletter.module.css';
 import { EmailOutlined} from "@mui/icons-material";
+import PostButton from "../Button/Button";
+import { Button } from "@mui/material";
 
 const Newsletter = () => {
   return (
@@ -16,6 +18,7 @@ const Newsletter = () => {
             <div className={styles.input_container}>
             <EmailOutlined />
             <input type="email" placeholder="Email Address" className={styles.subscribe__input} />
+            <Button color="error">Subscribe</Button>
             </div>
   </div>
   </div>

@@ -7,7 +7,7 @@ import StarOutlineOutlinedIcon from '@mui/icons-material/StarOutlineOutlined';
 import StarHalfOutlinedIcon from '@mui/icons-material/StarHalfOutlined';
 
 const TestimonialCard = (props) => {
-  const { imgUrl, title, lesson, students, rating } = props.item;
+  const { imgUrl, name,designation, rating,review } = props.item;
   
   const renderStars = () => {
     const filledStars = Math.floor(rating);
@@ -35,13 +35,12 @@ const TestimonialCard = (props) => {
     <div >
     <div className={styles.card}>
         <img className={styles.card_img} src={imgUrl} alt="" />
-        <div className={styles.card_p}>This is the review</div>
-        <div className={styles.card_h2}>Chirag Soni</div>
-        <div className={styles.card_h4}></div>  
-        
+        <div className={styles.card_p}>{name}</div>
+        <div className={styles.card_h2}>{designation}</div>
         <div className={styles.testimonials_star_container}>
           {renderStars()}
         </div>
+        <div className={styles.card_h4}>{review}</div>  
         </div>
     </div>
   );

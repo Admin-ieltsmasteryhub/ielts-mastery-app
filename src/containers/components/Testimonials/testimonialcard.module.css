@@ -17,6 +17,35 @@
   left: 21px;
 }
 
+.card_p{
+  color: #000;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: center;
+}
+.card_h2{
+  text-align: center;
+  color: #505050;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.card_h4{
+  color: #000;
+font-family: Poppins;
+font-size: 18px;
+font-style: italic;
+font-weight: 400;
+line-height: 150%; /* 27px */
+}
+
+
 .testimonial_stars {
   margin-left: 1.5rem;
 }
@@ -26,27 +55,8 @@
   margin-left: 1.5rem;
 }
 
-@media only screen and (max-width: 767px) {
-
-  .single_course_item {
-    background: #FFF;
-    height: auto; /* Set height to auto for smaller screens */
-  }
-
-  .image_testimonial {
-    margin-left: 0; /* Remove left margin for smaller screens */
-    margin-bottom: 1rem; /* Add bottom margin for spacing */
-  }
-
-  .design {
-    margin-left: 0; /* Remove left margin for smaller screens */
-  }
-
-  .testimonialtitle {
-    margin-top: 0; /* Remove top margin for smaller screens */
-    margin-right: 0; /* Remove right margin for smaller screens */
-    text-align: center; /* Center text for smaller screens */
-  }
+@media only screen and (max-width: 767px) 
+{
 
   .testimonial_stars {
     margin-left: 0; /* Remove left margin for smaller screens */
