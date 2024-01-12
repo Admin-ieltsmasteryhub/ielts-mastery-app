@@ -6,10 +6,11 @@ import nextIcon from "../../assets/images/next.png";
 import { NavLink } from "react-router-dom";
 import SearchBar from "../Search-bar/SearchBar";
 import { Progress } from "semantic-ui-react";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeMainItem, setActiveMainItem] = useState(null);
   const [activeItem, setActiveItem] = useState(null);
   const [activeSubItem, setActiveSubItem] = useState(null);
   const [activeSubSubItem, setActiveSubSubItem] = useState(null);
@@ -53,8 +54,7 @@ const Header = () => {
   }, []);
 
   const windowHeight = window.innerHeight; // Changed from document to window
-  const documentHeight =
-    document.documentElement.scrollHeight - windowHeight;
+  const documentHeight = document.documentElement.scrollHeight - windowHeight;
   const scrollPercentage = (scrollPosition / documentHeight) * 100;
 
   return (
@@ -69,7 +69,9 @@ const Header = () => {
         }
 
         #progress-bar {
-          //display: ${showProgressBar ? "block" : "none"}; // Show/hide progress bar based on showProgressBar state
+          //display: ${
+            showProgressBar ? "block" : "none"
+          }; // Show/hide progress bar based on showProgressBar state
         }
         .ui.progress:last-child {
           margin: 0;
@@ -100,66 +102,61 @@ const Header = () => {
             </div>
 
             <div className={styles.nav}>
-              <div className={styles.nav__menu}>
-                <ul className={styles.nav__list}>
+              <div className={styles.nav_menu}>
+                <ul className={styles.nav_list}>
                   {Links.navLinks.map((item, index) => (
-                    <li key={index} className={styles.nav__item}>
-                      <NavLink
-                        //className={styles["hover-underline-animation"]}
-                        to={`${item.url}`}
-                      >
-                        {item.display}
-                      </NavLink>
+                    <li key={index} className={styles.nav_item}>
+                      <NavLink to={`${item.url}`}>{item.display}</NavLink>
                       {item.subLinks && (
-                        <ul className={styles["sub__list"]}>
+                        <ul className={styles.sub_list}>
                           {item.subLinks.map((subItem, subIndex) => (
                             <li
                               key={subIndex}
-                              className={`${styles["sub__item"]} ${
+                              className={`${styles.sub_item} ${
                                 activeSubItem === subItem ? styles.active : ""
                               }`}
                             >
-                              <NavLink
-                                to={`${subItem.url}`}
-                                onClick={() => toggleSubItem(subItem)}
-                              >
+                              <NavLink to={`${subItem.url}`} onClick={() => toggleSubItem(subItem)}>
                                 {subItem.display}
                                 {subItem.subLinks && (
                                   <img
                                     src={nextIcon}
                                     alt="Next"
-                                    className={styles["next__icon"]}
+                                    className={styles["next_icon"]}
                                   />
                                 )}
                               </NavLink>
-                              {subItem.subLinks && activeSubItem === subItem && (
-                                <ul className={styles["sub__sub__list"]}>
-                                  {subItem.subLinks.map(
-                                    (subSubItem, subSubIndex) => (
-                                      <li
-                                        key={subSubIndex}
-                                        className={`${styles["sub__sub__item"]} ${
-                                          activeSubSubItem === subSubItem
-                                            ? styles.active
-                                            : ""
-                                        }`}
-                                      >
-                                        <NavLink
-                                          to={`/${subItem.display.replace(
-                                            /\s+/g,
-                                            "-"
-                                          )}/${subSubItem.url}`}
-                                          onClick={() =>
-                                            toggleSubSubItem(subSubItem)
-                                          }
+                              {subItem.subLinks &&
+                                activeSubItem === subItem && (
+                                  <ul className={styles["sub_sub_list"]}>
+                                    {subItem.subLinks.map(
+                                      (subSubItem, subSubIndex) => (
+                                        <li
+                                          key={subSubIndex}
+                                          className={`${
+                                            styles["sub_sub_item"]
+                                          } ${
+                                            activeSubSubItem === subSubItem
+                                              ? styles.active
+                                              : ""
+                                          }`}
                                         >
-                                          {subSubItem.display}
-                                        </NavLink>
-                                      </li>
-                                    )
-                                  )}
-                                </ul>
-                              )}
+                                          <NavLink
+                                            to={`/${subItem.display.replace(
+                                              /\s+/g,
+                                              "-"
+                                            )}/${subSubItem.url}`}
+                                            onClick={() =>
+                                              toggleSubSubItem(subSubItem)
+                                            }
+                                          >
+                                            {subSubItem.display}
+                                          </NavLink>
+                                        </li>
+                                      )
+                                    )}
+                                  </ul>
+                                )}
                             </li>
                           ))}
                         </ul>
@@ -172,41 +169,61 @@ const Header = () => {
             <div className={styles.search_bar}>
               <SearchBar />
             </div>
-            <div className={styles.mobile__menu}>
-              <div className={styles.search_bar_mobile}><SearchBar /></div>
-              <div className={styles.menu}><MenuIcon onClick={toggleMobileMenu}/></div> 
+            <div className={styles.mobile_menu}>
+              <div className={styles.search_bar_mobile}>
+                <SearchBar />
+              </div>
+              <div className={styles.menu}>
+                <MenuIcon onClick={toggleMobileMenu} />
+              </div>
             </div>
           </div>
 
           {isMobileMenuOpen && (
-            
-            <div 
+            <div
               className={styles.mobile_menu_overlay}
-              onClick={toggleMobileMenu}
             >
-              <div
-                className={styles.mobile_menu_content}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <div>
+              <div className={styles.mobile_menu_content}>
+                <div className={styles.mobile_menu_header}>
                   <NavLink to="/" className="ri-pantone-line">
                     IELTS
                   </NavLink>
+                  <i onClick={toggleMobileMenu}>x</i>
                 </div>
-                <br></br>
                 {Links.navLinks.map((item, index) => (
                   <div className={styles.nav_mobile_item_container}>
                     <ul key={index} className={styles.nav_mobile_item}>
-                      <NavLink style={{ textDecoration: 'none' }}
-                        className={styles.hover_underline_animation}
+                      <NavLink 
+                        className={`${styles.nav_item_text} ${activeMainItem === item ? styles.active : ''}`}
+                        onClick={() => setActiveMainItem(item)}
+                        //className={styles.hover_underline_animation}
                         to={`${item.url}`}
                       >
                         {item.display}
                       </NavLink>
-                      
+                      {activeMainItem === item && item.subLinks && (
+                        <ul className={styles.sub_mobile_list}>
+                          {item.subLinks.map((subItem, subIndex) => (
+                            <li
+                              key={subIndex}
+                              className={`${styles.sub_mobile_item} ${
+                                activeSubItem === subItem ? styles.active : ""
+                              }`}
+                            >
+                              <NavLink to={`${subItem.url}`} onClick={() => toggleSubItem(subItem)}>
+                                {subItem.display}
+                                {subItem.subLinks && (
+                                  <> {">"} </>
+                                )}
+                              </NavLink>
+                              
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </ul>
-                    </div>
-                  ))}
+                  </div>
+                ))}
               </div>
             </div>
           )}

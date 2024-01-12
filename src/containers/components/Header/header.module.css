@@ -58,7 +58,7 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 } */
 
-.nav__list {
+.nav_list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -70,17 +70,17 @@
   color: rgba(0,0,0,.87);
 }
 
-.nav__item {
+.nav_item {
   position: relative;
 }
 
-.nav__item a {
+.nav_item a {
   color: #0a2b1e;
   text-decoration: none;
 }
 
-/* .nav__item:hover > a,
-.nav__item:hover > .sub_list {
+/* .nav_item:hover > a,
+.nav_item:hover > .sub_list {
   color: #e31837;
   text-decoration: none;
   transition: 0.3s;
@@ -91,33 +91,33 @@
   text-decoration: none;
 } */
 
-.nav__item a:hover {
+.nav_item a:hover {
   color: #e31837;
   text-decoration: none;
   transition-timing-function: ease-in-out;
 }
 
-.nav__right p {
+.nav_right p {
   font-weight: 500;
   color: #0a2b1e;
   font-size: 1.1rem;
 }
 
-.nav__right p i {
+.nav_right p i {
   font-size: 1.3rem;
 }
 
-.mobile__menu span i {
+.mobile_menu span i {
   font-size: 1.4rem;
   color: #0a2b1e;
   cursor: pointer;
 }
 
-.mobile__menu {
+.mobile_menu {
   display: none;
 }
 
-.sub__list {
+.sub_list {
   position: absolute;
   top: 100%;
   left: 0;
@@ -130,11 +130,11 @@
   z-index: 3;
 }
 
-.nav__item:hover .sub__list {
+.nav_item:hover .sub_list {
   display: block;
 }
 
-.sub__list .sub__item {
+.sub_list .sub_item {
   padding: 0.5rem 1rem;
   white-space: nowrap;
   margin: 0;
@@ -143,16 +143,16 @@
   font-weight: 500;
 }
 /* 
-.sub__list {
+.sub_list {
   font-size: 0.9rem;
 } */
 
-.sub__item a:hover{
+.sub_item a:hover{
   font-weight: bold;
   color: #0a2b1e;
 }
 
-.sub__sub__list {
+.sub_sub_list {
   position: absolute;
   top: 0;
   left: 100%;
@@ -165,31 +165,31 @@
   font-weight: 500;
 }
 
-/* .sub__item:hover .sub__sub__list {
+/* .sub_item:hover .sub_sub_list {
   display: block;
   transition-delay: 10s !important;
 } */
 
-.sub__sub__list .sub__sub__item {
+.sub_sub_list .sub_sub_item {
   padding: 0.5rem 1rem;
   white-space: nowrap;
   margin: 0;
 }
 
-/* .sub__sub__item:hover{
+/* .sub_sub_item:hover{
     background-color: #e31837;
 } */
 
-.sub__sub__item a:hover{
+.sub_sub_item a:hover{
     color:#0a2b1e;
     font-weight: bold;
 }
 
-/* .sub__sub__list .sub__sub__item a {
+/* .sub_sub_list .sub_sub_item a {
   font-size: 0.9rem;
 } */
 
-.next__icon {
+.next_icon {
   width: 12px;
   height: 12px;
   margin-left: 5px;
@@ -200,7 +200,7 @@
   cursor: pointer;
 }
 
-/* .sub__item:hover{
+/* .sub_item:hover{
   background-color: #e31837;
   color: #fff;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -239,7 +239,11 @@
   .search_bar_mobile{
     margin-right: 0.7rem;
   }
-  .nav__menu {
+  .mobile_menu_header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav_menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -250,55 +254,14 @@
     display: none;
   }
 
-  .nav__list {
-    position: absolute;
-    background: #fff;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 3;
-    padding-top: 50px;
-  }
-
-  .nav__item {
-    position: relative;
-  }
-
-  .nav__item:hover .sub__list {
+  .nav_right {
     display: none;
   }
 
-  .sub__list {
-    position: static;
-    background-color: transparent;
-    box-shadow: none;
-    min-width: auto;
-    padding: 0;
-    list-style: none;
-  }
-
-  .sub__list .sub__item {
-    padding: 0;
-    margin: 0;
-
-  }
-
-  .nav__right {
-    display: none;
-  }
-
-  .mobile__menu {
+  .mobile_menu {
     display: inline-flex;
     align-items: center;
     padding-right: 0.7rem;
-  }
-
-  .active__menu .nav__list {
-    display: block;
   }
 
   .mobile_menu_overlay {
@@ -316,7 +279,7 @@
 
   .mobile_menu_content {
     background: #fff;
-    width: 90%;
+    width: 60%;
     max-width: 400px;
     padding: 1rem;
     border-radius: 4px;
@@ -326,12 +289,31 @@
   }
 
   .nav_mobile_item{
-    text-decoration: none;
     text-align: center;
+    padding: 1rem 0px 1rem 0px;
+    margin: 0px;
   }
 
   .nav_mobile_item_container{
     
+  }
+
+  .nav_item_text{
+    color: black;
+    font-size: 1rem;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+  .nav_item_text:hover{
+    color: #e31837;
+  }
+
+  .sub_mobile_list{
+
+  }
+
+  .sub_mobile_item{
 
   }
 }
