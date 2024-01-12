@@ -102,15 +102,16 @@ const Testimonial = () => {
               <TestimonialCard item={item} />
               </Col>
             
-          ))}</div>: 
+          ))}</div>
+          : 
 
-          <Slider {...settings}>
-            {coursesData.map((item) => (
+          //<Slider {...settings}>
+            coursesData.map((item) => (
               <Col md="12" key={item.id}>
                 <TestimonialCard item={item} />
               </Col>
-            ))}
-          </Slider>
+            ))
+          //</Slider>
           };
         </>
       </div>

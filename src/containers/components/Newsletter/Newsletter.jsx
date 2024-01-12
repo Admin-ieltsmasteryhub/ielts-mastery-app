@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import styles from './newsletter.module.css';
 import { EmailOutlined} from "@mui/icons-material";
-import PostButton from "../Button/Button";
 import { Button } from "@mui/material";
 
 const Newsletter = () => {

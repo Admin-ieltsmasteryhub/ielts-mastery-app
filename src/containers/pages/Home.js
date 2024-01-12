@@ -20,6 +20,12 @@ import FooterCopyright from "../components/Footer-Copyright/FooterCopyright";
 const Home = () => {
   return (
     <Fragment>
+      <style>{`
+  .html{
+    scroll-behaviour:smoooth;
+
+  }
+  `}</style>
       <Header />
       <HeroSection />
       <Courses />

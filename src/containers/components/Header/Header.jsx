@@ -172,58 +172,41 @@ const Header = () => {
             <div className={styles.search_bar}>
               <SearchBar />
             </div>
-            <div className={styles["mobile__menu"]}>
+            <div className={styles.mobile__menu}>
               <div className={styles.search_bar_mobile}><SearchBar /></div>
               <div className={styles.menu}><MenuIcon onClick={toggleMobileMenu}/></div> 
             </div>
           </div>
 
           {isMobileMenuOpen && (
-            <div
-              className={styles["mobile__menu__overlay"]}
+            
+            <div 
+              className={styles.mobile_menu_overlay}
               onClick={toggleMobileMenu}
             >
               <div
-                className={styles["mobile__menu__content"]}
+                className={styles.mobile_menu_content}
                 onClick={(e) => e.stopPropagation()}
               >
-                <ul className={styles["mobile__nav__list"]}>
-                  {Links.navLinksMobile.map((item, index) => (
-                    <li
-                      key={index}
-                      className={`mobile__nav__item ${
-                        activeItem === item ? styles.active : ""
-                      }`}
-                    >
-                      <NavLink
-                        to={item.url}
-                        onClick={() =>
-                          setActiveItem((prevItem) =>
-                            prevItem === item ? null : item
-                          )
-                        }
+                <div>
+                  <NavLink to="/" className="ri-pantone-line">
+                    IELTS
+                  </NavLink>
+                </div>
+                <br></br>
+                {Links.navLinks.map((item, index) => (
+                  <div className={styles.nav_mobile_item_container}>
+                    <ul key={index} className={styles.nav_mobile_item}>
+                      <NavLink style={{ textDecoration: 'none' }}
+                        className={styles.hover_underline_animation}
+                        to={`${item.url}`}
                       >
                         {item.display}
-                        {item.subLinks && (
-                          <img
-                            src={nextIcon}
-                            alt="Next"
-                            className={styles["next__icon"]}
-                          />
-                        )}
                       </NavLink>
-                      {item.subLinks && activeItem === item && (
-                        <ul className={styles["mobile__sub__list"]}>
-                          {item.subLinks.map((subItem, subIndex) => (
-                            <li key={subIndex} className={styles["mobile__sub__item"]}>
-                              <NavLink to={subItem.url}>{subItem.display}</NavLink>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
+                      
+                    </ul>
+                    </div>
                   ))}
-                </ul>
               </div>
             </div>
           )}
