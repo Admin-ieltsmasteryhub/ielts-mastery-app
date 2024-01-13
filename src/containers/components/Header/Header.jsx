@@ -27,11 +27,13 @@ const Header = () => {
     );
   };
 
-  const toggleSubSubItem = (subSubItem) => {
-    setActiveSubSubItem((prevSubSubItem) =>
-      prevSubSubItem === subSubItem ? null : subSubItem
-    );
-  };
+  function toggleSubSubItem(subSubItem) {
+    const subSubMenu = subSubItem.parentElement.parentElement;
+    subSubMenu.classList.toggle(styles.show);
+    subSubMenu.classList.toggle(styles.flip);
+  
+    subSubItem.classList.toggle(styles.show);
+  }
 
   const handleScroll = () => {
     const position = window.scrollY;
@@ -116,7 +118,10 @@ const Header = () => {
                                 activeSubItem === subItem ? styles.active : ""
                               }`}
                             >
-                              <NavLink to={`${subItem.url}`} onClick={() => toggleSubItem(subItem)}>
+                              <NavLink
+                                to={`${subItem.url}`}
+                                onClick={() => toggleSubItem(subItem)}
+                              >
                                 {subItem.display}
                                 {subItem.subLinks && (
                                   <img
@@ -128,14 +133,12 @@ const Header = () => {
                               </NavLink>
                               {subItem.subLinks &&
                                 activeSubItem === subItem && (
-                                  <ul className={styles["sub_sub_list"]}>
+                                  <ul className={styles.sub_sub_list}>
                                     {subItem.subLinks.map(
                                       (subSubItem, subSubIndex) => (
                                         <li
                                           key={subSubIndex}
-                                          className={`${
-                                            styles["sub_sub_item"]
-                                          } ${
+                                          className={`${styles.sub_sub_item} ${
                                             activeSubSubItem === subSubItem
                                               ? styles.active
                                               : ""
@@ -180,9 +183,7 @@ const Header = () => {
           </div>
 
           {isMobileMenuOpen && (
-            <div
-              className={styles.mobile_menu_overlay}
-            >
+            <div className={styles.mobile_menu_overlay}>
               <div className={styles.mobile_menu_content}>
                 <div className={styles.mobile_menu_header}>
                   <NavLink to="/" className="ri-pantone-line">
@@ -193,8 +194,10 @@ const Header = () => {
                 {Links.navLinks.map((item, index) => (
                   <div className={styles.nav_mobile_item_container}>
                     <ul key={index} className={styles.nav_mobile_item}>
-                      <NavLink 
-                        className={`${styles.nav_item_text} ${activeMainItem === item ? styles.active : ''}`}
+                      <NavLink
+                        className={`${styles.nav_item_text} ${
+                          activeMainItem === item ? styles.active : ""
+                        }`}
                         onClick={() => setActiveMainItem(item)}
                         //className={styles.hover_underline_animation}
                         to={`${item.url}`}
@@ -210,13 +213,46 @@ const Header = () => {
                                 activeSubItem === subItem ? styles.active : ""
                               }`}
                             >
-                              <NavLink to={`${subItem.url}`} onClick={() => toggleSubItem(subItem)}>
+                              <NavLink
+                                className={`${styles.nav_item_text} ${
+                                  activeSubItem === subItem ? styles.active : ""
+                                }`}
+                                to={`${subItem.url}`}
+                                onClick={() => toggleSubItem(subItem)}
+                              >
                                 {subItem.display}
-                                {subItem.subLinks && (
-                                  <> {">"} </>
-                                )}
+                                {subItem.subLinks && <> {">"} </>}
                               </NavLink>
-                              
+                              {subItem.subLinks &&
+                                activeSubItem === subItem && (
+                                  <ul className={styles.sub_sub_mobile_list}>
+                                    {subItem.subLinks.map(
+                                      (subSubItem, subSubIndex) => (
+                                        <li
+                                          key={subSubIndex}
+                                          className={`${styles.sub_sub_item} ${
+                                            activeSubSubItem === subSubItem
+                                              ? styles.active
+                                              : ""
+                                          }`}
+                                        >
+                                          <NavLink
+                                            className={styles.nav_item_text}
+                                            to={`/${subItem.display.replace(
+                                              /\s+/g,
+                                              "-"
+                                            )}/${subSubItem.url}`}
+                                            onClick={() =>
+                                              toggleSubSubItem(subSubItem)
+                                            }
+                                          >
+                                            {subSubItem.display}
+                                          </NavLink>
+                                        </li>
+                                      )
+                                    )}
+                                  </ul>
+                                )}
                             </li>
                           ))}
                         </ul>
