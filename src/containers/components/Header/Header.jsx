@@ -18,6 +18,8 @@ const Header = () => {
   const [showProgressBar, setShowProgressBar] = useState(0); // Added a state for showProgressBar
 
   const toggleMobileMenu = () => {
+    document.body.style.overflowY = isMobileMenuOpen ? '':'hidden';
+    setActiveMainItem(null);
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -185,59 +187,60 @@ const Header = () => {
           {isMobileMenuOpen && (
             <div className={styles.mobile_menu_overlay}>
               <div className={styles.mobile_menu_content}>
-                <div className={styles.mobile_menu_header}>
-                  <NavLink to="/" className="ri-pantone-line">
+                <div className={styles.mobile_menu_header_container}>
+                  <div className={styles.mobile_menu_header}>
+                  <NavLink to="/" >
                     IELTS
                   </NavLink>
                   <i onClick={toggleMobileMenu}>x</i>
+                  </div>
                 </div>
+                <div className={styles.mobile_menu_links_container}>
                 {Links.navLinks.map((item, index) => (
-                  <div className={styles.nav_mobile_item_container}>
-                    <ul key={index} className={styles.nav_mobile_item}>
-                      <NavLink
-                        className={`${styles.nav_item_text} ${
+                  <div className={styles.mobile_menu_container}>
+                    <div key={index} className={styles.menu_item}>
+                      <div onClick={() => setActiveMainItem(item)}>{item.display}</div>
+                      {activeMainItem === item && item.subLinks && (<>
+                        
+                        <div className={`${styles.mobile_submenu_container} ${
                           activeMainItem === item ? styles.active : ""
-                        }`}
-                        onClick={() => setActiveMainItem(item)}
-                        //className={styles.hover_underline_animation}
-                        to={`${item.url}`}
-                      >
-                        {item.display}
-                      </NavLink>
-                      {activeMainItem === item && item.subLinks && (
-                        <ul className={styles.sub_mobile_list}>
+                        }`}>
+                          <div className={styles.menu_item} onClick={() => setActiveMainItem(null)}>
+                        {`<`} Back
+                        </div>
                           {item.subLinks.map((subItem, subIndex) => (
-                            <li
+                            
+                            <div
                               key={subIndex}
-                              className={`${styles.sub_mobile_item} ${
-                                activeSubItem === subItem ? styles.active : ""
-                              }`}
+                              className={styles.menu_item}
                             >
                               <NavLink
-                                className={`${styles.nav_item_text} ${
-                                  activeSubItem === subItem ? styles.active : ""
-                                }`}
+                                className={styles.links}
                                 to={`${subItem.url}`}
                                 onClick={() => toggleSubItem(subItem)}
                               >
                                 {subItem.display}
                                 {subItem.subLinks && <> {">"} </>}
                               </NavLink>
+                              
                               {subItem.subLinks &&
-                                activeSubItem === subItem && (
-                                  <ul className={styles.sub_sub_mobile_list}>
+                                activeSubItem === subItem && (<>
+                                  {/* <div className={styles.menu_item} onClick={() => toggleSubItem(subItem)}>
+                                      {`<`} Back
+                                  </div> */}
+                                  <div className={styles.menu_item}>
                                     {subItem.subLinks.map(
                                       (subSubItem, subSubIndex) => (
-                                        <li
+                                        <div
                                           key={subSubIndex}
-                                          className={`${styles.sub_sub_item} ${
+                                          className={`${styles.menu_item} ${
                                             activeSubSubItem === subSubItem
                                               ? styles.active
                                               : ""
                                           }`}
                                         >
                                           <NavLink
-                                            className={styles.nav_item_text}
+                                            className={styles.links}
                                             to={`/${subItem.display.replace(
                                               /\s+/g,
                                               "-"
@@ -248,18 +251,19 @@ const Header = () => {
                                           >
                                             {subSubItem.display}
                                           </NavLink>
-                                        </li>
+                                        </div>
                                       )
                                     )}
-                                  </ul>
-                                )}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </ul>
+                                  </div>
+                                 </>)}
+                            </div>
+                            ))}
+                        </div>
+                      </>)}
+                    </div>
                   </div>
                 ))}
+                </div>
               </div>
             </div>
           )}
