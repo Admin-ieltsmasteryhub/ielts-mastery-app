@@ -7,6 +7,8 @@ import { NavLink } from "react-router-dom";
 import SearchBar from "../Search-bar/SearchBar";
 import { Progress } from "semantic-ui-react";
 import MenuIcon from "@mui/icons-material/Menu";
+import MobileHeader from "./MobileHeader";
+
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -185,88 +187,17 @@ const Header = () => {
           </div>
 
           {isMobileMenuOpen && (
-            <div className={styles.mobile_menu_overlay}>
-              <div className={styles.mobile_menu_content}>
-                <div className={styles.mobile_menu_header_container}>
-                  <div className={styles.mobile_menu_header}>
-                  <NavLink to="/" >
-                    IELTS
-                  </NavLink>
-                  <i onClick={toggleMobileMenu}>x</i>
-                  </div>
-                </div>
-                <div className={styles.mobile_menu_links_container}>
-                {Links.navLinks.map((item, index) => (
-                  <div className={styles.mobile_menu_container}>
-                    <div key={index} className={styles.menu_item}>
-                      <div onClick={() => setActiveMainItem(item)}>{item.display}</div>
-                      {activeMainItem === item && item.subLinks && (<>
-                        
-                        <div className={`${styles.mobile_submenu_container} ${
-                          activeMainItem === item ? styles.active : ""
-                        }`}>
-                          <div className={styles.menu_item} onClick={() => setActiveMainItem(null)}>
-                        {`<`} Back
-                        </div>
-                          {item.subLinks.map((subItem, subIndex) => (
-                            
-                            <div
-                              key={subIndex}
-                              className={styles.menu_item}
-                            >
-                              <NavLink
-                                className={styles.links}
-                                to={`${subItem.url}`}
-                                onClick={() => toggleSubItem(subItem)}
-                              >
-                                {subItem.display}
-                                {subItem.subLinks && <> {">"} </>}
-                              </NavLink>
-                              
-                              {subItem.subLinks &&
-                                activeSubItem === subItem && (<>
-                                  {/* <div className={styles.menu_item} onClick={() => toggleSubItem(subItem)}>
-                                      {`<`} Back
-                                  </div> */}
-                                  <div className={styles.menu_item}>
-                                    {subItem.subLinks.map(
-                                      (subSubItem, subSubIndex) => (
-                                        <div
-                                          key={subSubIndex}
-                                          className={`${styles.menu_item} ${
-                                            activeSubSubItem === subSubItem
-                                              ? styles.active
-                                              : ""
-                                          }`}
-                                        >
-                                          <NavLink
-                                            className={styles.links}
-                                            to={`/${subItem.display.replace(
-                                              /\s+/g,
-                                              "-"
-                                            )}/${subSubItem.url}`}
-                                            onClick={() =>
-                                              toggleSubSubItem(subSubItem)
-                                            }
-                                          >
-                                            {subSubItem.display}
-                                          </NavLink>
-                                        </div>
-                                      )
-                                    )}
-                                  </div>
-                                 </>)}
-                            </div>
-                            ))}
-                        </div>
-                      </>)}
-                    </div>
-                  </div>
-                ))}
-                </div>
-              </div>
-            </div>
-          )}
+        <MobileHeader
+          isMobileMenuOpen={isMobileMenuOpen}
+          toggleMobileMenu={toggleMobileMenu}
+          setActiveMainItem={setActiveMainItem}
+          activeMainItem={activeMainItem}
+          toggleSubItem={toggleSubItem}
+          activeSubItem={activeSubItem}
+          toggleSubSubItem={toggleSubSubItem}
+          activeSubSubItem={activeSubSubItem}
+        />
+      )}
         </Container>
         <div id="progress-bar">
           <Progress percent={scrollPercentage} size="tiny" color="red" />

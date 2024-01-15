@@ -1,0 +1,136 @@
+/* mobileStyles.css */
+@media only screen and (max-width: 991px) {
+    .search_bar {
+      display: none;
+    }
+  
+    .search_bar_mobile {
+      margin-right: 0.7rem;
+    }
+  
+    .nav_menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0a2b1ec2;
+      z-index: 3;
+      display: none;
+    }
+  
+    .nav_right {
+      display: none;
+    }
+  
+    .mobile_menu {
+      display: inline-flex;
+      align-items: center;
+      padding-right: 0.7rem;
+    }
+  
+    .mobile_menu_overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  
+    .mobile_menu_content {
+      background: #fff;
+      position: absolute;
+      height: 100%;
+      width: 60%;
+      max-width: 400px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow-y: scroll;
+      z-index: 3;
+      transition: 0.5s ease-in-out;
+    }
+  
+    .mobile_menu_content::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .mobile_menu_header_container {
+      padding: 10px 10px 20px 10px;
+    }
+  
+    .mobile_menu_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .menu_item {
+      background-color: #fff;
+      padding: 10px 0px 10px 0px;
+      text-align: center;
+      cursor: pointer;
+
+    }
+  
+    .menu_item:hover,
+    .menu_item:active {
+        font-weight: bolder;
+        
+      }
+
+      .sub_menu_item {
+        background-color: #fff;
+        padding: 10px 0px 10px 0px;
+        text-align: center;
+        cursor: pointer;
+      }
+    
+      .menu_item:hover,
+      .menu_item:active {
+          font-weight: bolder;
+          
+        }
+
+    .links {
+      text-decoration: none;
+      color: black;
+    }
+    .links:hover{
+        font-weight: bolder;
+        color: black;
+    }
+    .linkssub {
+        text-decoration: none;
+        color: black;
+      }
+  
+      .linkssub.active{
+          color: red;
+      }
+      .linkssub:hover{
+          font-weight: bolder;
+          color: red;
+      }
+  
+    .mobile_submenu_container {
+      top: 40px;
+      margin-top: 10px;
+      background: #fff;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 100%;
+      transition: transform 0.5s ease-in-out, left 0.5s ease-in-out;
+    }
+  
+    .mobile_submenu_container.active {
+        transform: translateX(100%);
+        left: -100%;
+    }
+  }
+  
